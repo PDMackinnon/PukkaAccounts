@@ -1,0 +1,302 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8066FBA514432FAD00E48AF1 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8066FBA414432FAD00E48AF1 /* Cocoa.framework */; };
+		8066FBAF14432FAD00E48AF1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8066FBAD14432FAD00E48AF1 /* InfoPlist.strings */; };
+		8066FBB214432FAD00E48AF1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8066FBB114432FAD00E48AF1 /* main.m */; };
+		8066FBB514432FAD00E48AF1 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 8066FBB314432FAD00E48AF1 /* Credits.rtf */; };
+		8066FBB814432FAD00E48AF1 /* PukkaAccountsAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8066FBB714432FAD00E48AF1 /* PukkaAccountsAppDelegate.m */; };
+		8066FBBB14432FAD00E48AF1 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8066FBB914432FAD00E48AF1 /* MainMenu.xib */; };
+		8066FBBE14432FAD00E48AF1 /* PukkaAccounts.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8066FBBC14432FAD00E48AF1 /* PukkaAccounts.xcdatamodeld */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		8066FBA014432FAD00E48AF1 /* PukkaAccounts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PukkaAccounts.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8066FBA414432FAD00E48AF1 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		8066FBA714432FAD00E48AF1 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		8066FBA814432FAD00E48AF1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		8066FBA914432FAD00E48AF1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		8066FBAC14432FAD00E48AF1 /* PukkaAccounts-Info.plist */ = {isa = PBXFileReference; path = "PukkaAccounts-Info.plist"; sourceTree = "<group>"; };
+		8066FBAE14432FAD00E48AF1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		8066FBB014432FAD00E48AF1 /* PukkaAccounts-Prefix.pch */ = {isa = PBXFileReference; path = "PukkaAccounts-Prefix.pch"; sourceTree = "<group>"; };
+		8066FBB114432FAD00E48AF1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8066FBB414432FAD00E48AF1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		8066FBB614432FAD00E48AF1 /* PukkaAccountsAppDelegate.h */ = {isa = PBXFileReference; path = PukkaAccountsAppDelegate.h; sourceTree = "<group>"; };
+		8066FBB714432FAD00E48AF1 /* PukkaAccountsAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PukkaAccountsAppDelegate.m; sourceTree = "<group>"; };
+		8066FBBA14432FAD00E48AF1 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		8066FBBD14432FAD00E48AF1 /* PukkaAccounts.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PukkaAccounts.xcdatamodel; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8066FB9D14432FAD00E48AF1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8066FBA514432FAD00E48AF1 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8066FB9514432FAD00E48AF1 = {
+			isa = PBXGroup;
+			children = (
+				8066FBAA14432FAD00E48AF1 /* PukkaAccounts */,
+				8066FBA314432FAD00E48AF1 /* Frameworks */,
+				8066FBA114432FAD00E48AF1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8066FBA114432FAD00E48AF1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8066FBA014432FAD00E48AF1 /* PukkaAccounts.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8066FBA314432FAD00E48AF1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8066FBA414432FAD00E48AF1 /* Cocoa.framework */,
+				8066FBA614432FAD00E48AF1 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8066FBA614432FAD00E48AF1 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8066FBA714432FAD00E48AF1 /* AppKit.framework */,
+				8066FBA814432FAD00E48AF1 /* CoreData.framework */,
+				8066FBA914432FAD00E48AF1 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		8066FBAA14432FAD00E48AF1 /* PukkaAccounts */ = {
+			isa = PBXGroup;
+			children = (
+				8066FBB614432FAD00E48AF1 /* PukkaAccountsAppDelegate.h */,
+				8066FBB714432FAD00E48AF1 /* PukkaAccountsAppDelegate.m */,
+				8066FBB914432FAD00E48AF1 /* MainMenu.xib */,
+				8066FBBC14432FAD00E48AF1 /* PukkaAccounts.xcdatamodeld */,
+				8066FBAB14432FAD00E48AF1 /* Supporting Files */,
+			);
+			path = PukkaAccounts;
+			sourceTree = "<group>";
+		};
+		8066FBAB14432FAD00E48AF1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8066FBAC14432FAD00E48AF1 /* PukkaAccounts-Info.plist */,
+				8066FBAD14432FAD00E48AF1 /* InfoPlist.strings */,
+				8066FBB014432FAD00E48AF1 /* PukkaAccounts-Prefix.pch */,
+				8066FBB114432FAD00E48AF1 /* main.m */,
+				8066FBB314432FAD00E48AF1 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8066FB9F14432FAD00E48AF1 /* PukkaAccounts */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8066FBC114432FAD00E48AF1 /* Build configuration list for PBXNativeTarget "PukkaAccounts" */;
+			buildPhases = (
+				8066FB9C14432FAD00E48AF1 /* Sources */,
+				8066FB9D14432FAD00E48AF1 /* Frameworks */,
+				8066FB9E14432FAD00E48AF1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PukkaAccounts;
+			productName = PukkaAccounts;
+			productReference = 8066FBA014432FAD00E48AF1 /* PukkaAccounts.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8066FB9714432FAD00E48AF1 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 8066FB9A14432FAD00E48AF1 /* Build configuration list for PBXProject "PukkaAccounts" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 8066FB9514432FAD00E48AF1;
+			productRefGroup = 8066FBA114432FAD00E48AF1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8066FB9F14432FAD00E48AF1 /* PukkaAccounts */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8066FB9E14432FAD00E48AF1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8066FBAF14432FAD00E48AF1 /* InfoPlist.strings in Resources */,
+				8066FBB514432FAD00E48AF1 /* Credits.rtf in Resources */,
+				8066FBBB14432FAD00E48AF1 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8066FB9C14432FAD00E48AF1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8066FBB214432FAD00E48AF1 /* main.m in Sources */,
+				8066FBB814432FAD00E48AF1 /* PukkaAccountsAppDelegate.m in Sources */,
+				8066FBBE14432FAD00E48AF1 /* PukkaAccounts.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		8066FBAD14432FAD00E48AF1 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8066FBAE14432FAD00E48AF1 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		8066FBB314432FAD00E48AF1 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8066FBB414432FAD00E48AF1 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		8066FBB914432FAD00E48AF1 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8066FBBA14432FAD00E48AF1 /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8066FBBF14432FAD00E48AF1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		8066FBC014432FAD00E48AF1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		8066FBC214432FAD00E48AF1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PukkaAccounts/PukkaAccounts-Prefix.pch";
+				INFOPLIST_FILE = "PukkaAccounts/PukkaAccounts-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		8066FBC314432FAD00E48AF1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PukkaAccounts/PukkaAccounts-Prefix.pch";
+				INFOPLIST_FILE = "PukkaAccounts/PukkaAccounts-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8066FB9A14432FAD00E48AF1 /* Build configuration list for PBXProject "PukkaAccounts" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8066FBBF14432FAD00E48AF1 /* Debug */,
+				8066FBC014432FAD00E48AF1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8066FBC114432FAD00E48AF1 /* Build configuration list for PBXNativeTarget "PukkaAccounts" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8066FBC214432FAD00E48AF1 /* Debug */,
+				8066FBC314432FAD00E48AF1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		8066FBBC14432FAD00E48AF1 /* PukkaAccounts.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				8066FBBD14432FAD00E48AF1 /* PukkaAccounts.xcdatamodel */,
+			);
+			currentVersion = 8066FBBD14432FAD00E48AF1 /* PukkaAccounts.xcdatamodel */;
+			path = PukkaAccounts.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 8066FB9714432FAD00E48AF1 /* Project object */;
+}
