@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		800D3DBA144338DA00FC53AF /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 800D3DB9144338DA00FC53AF /* DataManager.m */; };
+		800D3DBE144354B600FC53AF /* TodayDatePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 800D3DBD144354B600FC53AF /* TodayDatePicker.m */; };
+		800D3DC11443550800FC53AF /* Transaction.m in Sources */ = {isa = PBXBuildFile; fileRef = 800D3DC01443550800FC53AF /* Transaction.m */; };
+		800D3DC41443552D00FC53AF /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 800D3DC31443552D00FC53AF /* User.m */; };
+		800D3DC7144355FA00FC53AF /* TransController.m in Sources */ = {isa = PBXBuildFile; fileRef = 800D3DC6144355F900FC53AF /* TransController.m */; };
 		8066FBA514432FAD00E48AF1 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8066FBA414432FAD00E48AF1 /* Cocoa.framework */; };
 		8066FBAF14432FAD00E48AF1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8066FBAD14432FAD00E48AF1 /* InfoPlist.strings */; };
 		8066FBB214432FAD00E48AF1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8066FBB114432FAD00E48AF1 /* main.m */; };
@@ -17,17 +22,27 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		800D3DB8144338DA00FC53AF /* DataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataManager.h; sourceTree = "<group>"; };
+		800D3DB9144338DA00FC53AF /* DataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataManager.m; sourceTree = "<group>"; };
+		800D3DBC144354B600FC53AF /* TodayDatePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TodayDatePicker.h; sourceTree = "<group>"; };
+		800D3DBD144354B600FC53AF /* TodayDatePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TodayDatePicker.m; sourceTree = "<group>"; };
+		800D3DBF1443550800FC53AF /* Transaction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Transaction.h; sourceTree = "<group>"; };
+		800D3DC01443550800FC53AF /* Transaction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Transaction.m; sourceTree = "<group>"; };
+		800D3DC21443552D00FC53AF /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		800D3DC31443552D00FC53AF /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		800D3DC5144355F900FC53AF /* TransController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransController.h; sourceTree = "<group>"; };
+		800D3DC6144355F900FC53AF /* TransController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransController.m; sourceTree = "<group>"; };
 		8066FBA014432FAD00E48AF1 /* PukkaAccounts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PukkaAccounts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8066FBA414432FAD00E48AF1 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		8066FBA714432FAD00E48AF1 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		8066FBA814432FAD00E48AF1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		8066FBA914432FAD00E48AF1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		8066FBAC14432FAD00E48AF1 /* PukkaAccounts-Info.plist */ = {isa = PBXFileReference; path = "PukkaAccounts-Info.plist"; sourceTree = "<group>"; };
+		8066FBAC14432FAD00E48AF1 /* PukkaAccounts-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PukkaAccounts-Info.plist"; sourceTree = "<group>"; };
 		8066FBAE14432FAD00E48AF1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		8066FBB014432FAD00E48AF1 /* PukkaAccounts-Prefix.pch */ = {isa = PBXFileReference; path = "PukkaAccounts-Prefix.pch"; sourceTree = "<group>"; };
+		8066FBB014432FAD00E48AF1 /* PukkaAccounts-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PukkaAccounts-Prefix.pch"; sourceTree = "<group>"; };
 		8066FBB114432FAD00E48AF1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8066FBB414432FAD00E48AF1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
-		8066FBB614432FAD00E48AF1 /* PukkaAccountsAppDelegate.h */ = {isa = PBXFileReference; path = PukkaAccountsAppDelegate.h; sourceTree = "<group>"; };
+		8066FBB614432FAD00E48AF1 /* PukkaAccountsAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PukkaAccountsAppDelegate.h; sourceTree = "<group>"; };
 		8066FBB714432FAD00E48AF1 /* PukkaAccountsAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PukkaAccountsAppDelegate.m; sourceTree = "<group>"; };
 		8066FBBA14432FAD00E48AF1 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		8066FBBD14432FAD00E48AF1 /* PukkaAccounts.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PukkaAccounts.xcdatamodel; sourceTree = "<group>"; };
@@ -84,10 +99,20 @@
 		8066FBAA14432FAD00E48AF1 /* PukkaAccounts */ = {
 			isa = PBXGroup;
 			children = (
+				800D3DBC144354B600FC53AF /* TodayDatePicker.h */,
+				800D3DBD144354B600FC53AF /* TodayDatePicker.m */,
+				800D3DB8144338DA00FC53AF /* DataManager.h */,
+				800D3DB9144338DA00FC53AF /* DataManager.m */,
 				8066FBB614432FAD00E48AF1 /* PukkaAccountsAppDelegate.h */,
 				8066FBB714432FAD00E48AF1 /* PukkaAccountsAppDelegate.m */,
 				8066FBB914432FAD00E48AF1 /* MainMenu.xib */,
 				8066FBBC14432FAD00E48AF1 /* PukkaAccounts.xcdatamodeld */,
+				800D3DC21443552D00FC53AF /* User.h */,
+				800D3DC31443552D00FC53AF /* User.m */,
+				800D3DBF1443550800FC53AF /* Transaction.h */,
+				800D3DC01443550800FC53AF /* Transaction.m */,
+				800D3DC5144355F900FC53AF /* TransController.h */,
+				800D3DC6144355F900FC53AF /* TransController.m */,
 				8066FBAB14432FAD00E48AF1 /* Supporting Files */,
 			);
 			path = PukkaAccounts;
@@ -168,6 +193,11 @@
 				8066FBB214432FAD00E48AF1 /* main.m in Sources */,
 				8066FBB814432FAD00E48AF1 /* PukkaAccountsAppDelegate.m in Sources */,
 				8066FBBE14432FAD00E48AF1 /* PukkaAccounts.xcdatamodeld in Sources */,
+				800D3DBA144338DA00FC53AF /* DataManager.m in Sources */,
+				800D3DBE144354B600FC53AF /* TodayDatePicker.m in Sources */,
+				800D3DC11443550800FC53AF /* Transaction.m in Sources */,
+				800D3DC41443552D00FC53AF /* User.m in Sources */,
+				800D3DC7144355FA00FC53AF /* TransController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +312,7 @@
 				8066FBC314432FAD00E48AF1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
