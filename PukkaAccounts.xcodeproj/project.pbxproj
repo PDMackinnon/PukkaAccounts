@@ -12,6 +12,9 @@
 		800D3DC11443550800FC53AF /* Transaction.m in Sources */ = {isa = PBXBuildFile; fileRef = 800D3DC01443550800FC53AF /* Transaction.m */; };
 		800D3DC41443552D00FC53AF /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 800D3DC31443552D00FC53AF /* User.m */; };
 		800D3DC7144355FA00FC53AF /* TransController.m in Sources */ = {isa = PBXBuildFile; fileRef = 800D3DC6144355F900FC53AF /* TransController.m */; };
+		801A1B0514449C5E000A3BF0 /* CurrentTransEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 801A1B0414449C5E000A3BF0 /* CurrentTransEntry.m */; };
+		801A1B091444A4C2000A3BF0 /* CurrentTransEntryController.m in Sources */ = {isa = PBXBuildFile; fileRef = 801A1B081444A4C2000A3BF0 /* CurrentTransEntryController.m */; };
+		801A1B0C1444A569000A3BF0 /* SalesController.m in Sources */ = {isa = PBXBuildFile; fileRef = 801A1B0B1444A568000A3BF0 /* SalesController.m */; };
 		8066FBA514432FAD00E48AF1 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8066FBA414432FAD00E48AF1 /* Cocoa.framework */; };
 		8066FBAF14432FAD00E48AF1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8066FBAD14432FAD00E48AF1 /* InfoPlist.strings */; };
 		8066FBB214432FAD00E48AF1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8066FBB114432FAD00E48AF1 /* main.m */; };
@@ -19,6 +22,11 @@
 		8066FBB814432FAD00E48AF1 /* PukkaAccountsAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8066FBB714432FAD00E48AF1 /* PukkaAccountsAppDelegate.m */; };
 		8066FBBB14432FAD00E48AF1 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8066FBB914432FAD00E48AF1 /* MainMenu.xib */; };
 		8066FBBE14432FAD00E48AF1 /* PukkaAccounts.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8066FBBC14432FAD00E48AF1 /* PukkaAccounts.xcdatamodeld */; };
+		80CCF66714473F6D00F66FA8 /* CDataScanner_Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 80CCF65E14473F6D00F66FA8 /* CDataScanner_Extensions.m */; };
+		80CCF66814473F6D00F66FA8 /* CDataScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 80CCF66014473F6D00F66FA8 /* CDataScanner.m */; };
+		80CCF66914473F6D00F66FA8 /* CJSONDeserializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 80CCF66214473F6D00F66FA8 /* CJSONDeserializer.m */; };
+		80CCF66A14473F6D00F66FA8 /* CJSONScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 80CCF66414473F6D00F66FA8 /* CJSONScanner.m */; };
+		80CCF66B14473F6D00F66FA8 /* CJSONSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 80CCF66614473F6D00F66FA8 /* CJSONSerializer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +40,12 @@
 		800D3DC31443552D00FC53AF /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		800D3DC5144355F900FC53AF /* TransController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransController.h; sourceTree = "<group>"; };
 		800D3DC6144355F900FC53AF /* TransController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransController.m; sourceTree = "<group>"; };
+		801A1B0314449C5E000A3BF0 /* CurrentTransEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurrentTransEntry.h; sourceTree = "<group>"; };
+		801A1B0414449C5E000A3BF0 /* CurrentTransEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CurrentTransEntry.m; sourceTree = "<group>"; };
+		801A1B071444A4C2000A3BF0 /* CurrentTransEntryController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurrentTransEntryController.h; sourceTree = "<group>"; };
+		801A1B081444A4C2000A3BF0 /* CurrentTransEntryController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CurrentTransEntryController.m; sourceTree = "<group>"; };
+		801A1B0A1444A568000A3BF0 /* SalesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SalesController.h; sourceTree = "<group>"; };
+		801A1B0B1444A568000A3BF0 /* SalesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SalesController.m; sourceTree = "<group>"; };
 		8066FBA014432FAD00E48AF1 /* PukkaAccounts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PukkaAccounts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8066FBA414432FAD00E48AF1 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		8066FBA714432FAD00E48AF1 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -46,6 +60,16 @@
 		8066FBB714432FAD00E48AF1 /* PukkaAccountsAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PukkaAccountsAppDelegate.m; sourceTree = "<group>"; };
 		8066FBBA14432FAD00E48AF1 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		8066FBBD14432FAD00E48AF1 /* PukkaAccounts.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PukkaAccounts.xcdatamodel; sourceTree = "<group>"; };
+		80CCF65D14473F6D00F66FA8 /* CDataScanner_Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDataScanner_Extensions.h; sourceTree = "<group>"; };
+		80CCF65E14473F6D00F66FA8 /* CDataScanner_Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDataScanner_Extensions.m; sourceTree = "<group>"; };
+		80CCF65F14473F6D00F66FA8 /* CDataScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDataScanner.h; sourceTree = "<group>"; };
+		80CCF66014473F6D00F66FA8 /* CDataScanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDataScanner.m; sourceTree = "<group>"; };
+		80CCF66114473F6D00F66FA8 /* CJSONDeserializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJSONDeserializer.h; sourceTree = "<group>"; };
+		80CCF66214473F6D00F66FA8 /* CJSONDeserializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJSONDeserializer.m; sourceTree = "<group>"; };
+		80CCF66314473F6D00F66FA8 /* CJSONScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJSONScanner.h; sourceTree = "<group>"; };
+		80CCF66414473F6D00F66FA8 /* CJSONScanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJSONScanner.m; sourceTree = "<group>"; };
+		80CCF66514473F6D00F66FA8 /* CJSONSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJSONSerializer.h; sourceTree = "<group>"; };
+		80CCF66614473F6D00F66FA8 /* CJSONSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJSONSerializer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +123,7 @@
 		8066FBAA14432FAD00E48AF1 /* PukkaAccounts */ = {
 			isa = PBXGroup;
 			children = (
+				80CCF65C14473F2700F66FA8 /* TouchJSON */,
 				800D3DBC144354B600FC53AF /* TodayDatePicker.h */,
 				800D3DBD144354B600FC53AF /* TodayDatePicker.m */,
 				800D3DB8144338DA00FC53AF /* DataManager.h */,
@@ -111,6 +136,12 @@
 				800D3DC31443552D00FC53AF /* User.m */,
 				800D3DBF1443550800FC53AF /* Transaction.h */,
 				800D3DC01443550800FC53AF /* Transaction.m */,
+				801A1B0314449C5E000A3BF0 /* CurrentTransEntry.h */,
+				801A1B0414449C5E000A3BF0 /* CurrentTransEntry.m */,
+				801A1B071444A4C2000A3BF0 /* CurrentTransEntryController.h */,
+				801A1B081444A4C2000A3BF0 /* CurrentTransEntryController.m */,
+				801A1B0A1444A568000A3BF0 /* SalesController.h */,
+				801A1B0B1444A568000A3BF0 /* SalesController.m */,
 				800D3DC5144355F900FC53AF /* TransController.h */,
 				800D3DC6144355F900FC53AF /* TransController.m */,
 				8066FBAB14432FAD00E48AF1 /* Supporting Files */,
@@ -128,6 +159,23 @@
 				8066FBB314432FAD00E48AF1 /* Credits.rtf */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		80CCF65C14473F2700F66FA8 /* TouchJSON */ = {
+			isa = PBXGroup;
+			children = (
+				80CCF65D14473F6D00F66FA8 /* CDataScanner_Extensions.h */,
+				80CCF65E14473F6D00F66FA8 /* CDataScanner_Extensions.m */,
+				80CCF65F14473F6D00F66FA8 /* CDataScanner.h */,
+				80CCF66014473F6D00F66FA8 /* CDataScanner.m */,
+				80CCF66114473F6D00F66FA8 /* CJSONDeserializer.h */,
+				80CCF66214473F6D00F66FA8 /* CJSONDeserializer.m */,
+				80CCF66314473F6D00F66FA8 /* CJSONScanner.h */,
+				80CCF66414473F6D00F66FA8 /* CJSONScanner.m */,
+				80CCF66514473F6D00F66FA8 /* CJSONSerializer.h */,
+				80CCF66614473F6D00F66FA8 /* CJSONSerializer.m */,
+			);
+			name = TouchJSON;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -198,6 +246,14 @@
 				800D3DC11443550800FC53AF /* Transaction.m in Sources */,
 				800D3DC41443552D00FC53AF /* User.m in Sources */,
 				800D3DC7144355FA00FC53AF /* TransController.m in Sources */,
+				801A1B0514449C5E000A3BF0 /* CurrentTransEntry.m in Sources */,
+				801A1B091444A4C2000A3BF0 /* CurrentTransEntryController.m in Sources */,
+				801A1B0C1444A569000A3BF0 /* SalesController.m in Sources */,
+				80CCF66714473F6D00F66FA8 /* CDataScanner_Extensions.m in Sources */,
+				80CCF66814473F6D00F66FA8 /* CDataScanner.m in Sources */,
+				80CCF66914473F6D00F66FA8 /* CJSONDeserializer.m in Sources */,
+				80CCF66A14473F6D00F66FA8 /* CJSONScanner.m in Sources */,
+				80CCF66B14473F6D00F66FA8 /* CJSONSerializer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

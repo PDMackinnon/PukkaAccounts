@@ -146,7 +146,7 @@ NSString * const DataManagerDidSaveFailedNotification = @"DataManagerDidSaveFail
 /**
      send the save: message to the application's managed object context. Any encountered errors are presented to the user.
  */
-- (BOOL)save:(id)sender {
+- (BOOL)save {
     
     if (![self.managedObjectContext hasChanges])
 		return YES;
