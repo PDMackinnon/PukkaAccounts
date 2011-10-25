@@ -11,6 +11,18 @@
 @implementation PukkaAccountsAppDelegate
 
 @synthesize manageUsersWindow;
+@synthesize creditDate;
+@synthesize creditDescr;
+@synthesize creditAmount;
+@synthesize crDateDispl;
+@synthesize crDescrDispl;
+@synthesize creditAmountDispl;
+@synthesize crTransTotal;
+@synthesize crNewBalance;
+@synthesize crCurrBalance;
+@synthesize userSearch;
+@dynamic pendingCredit;
+
 @synthesize window;
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
@@ -43,11 +55,113 @@
     Performs the save action for the application, which is to send the save: message to the application's managed object context. Any encountered errors are presented to the user.
  */
 - (IBAction) saveAction:(id)sender {
-  //  NSError *error = nil;
+    //  NSError *error = nil;
     
     [[DataManager sharedInstance] save];
     
 }
+
+
+
+- (IBAction)addNewCredit:(id)sender {
+    //single line transaction is prepared to add when the larger confirmation button is pressed. 
+    // so need just a single transaction stored and displayed, pending the confirmation
+    
+    NSManagedObjectContext * moc = [[DataManager sharedInstance] managedObjectContext];
+    pendingCredit = [[Transaction alloc] initWithEntity:[NSEntityDescription entityForName:@"Transaction" inManagedObjectContext:moc] insertIntoManagedObjectContext:nil];
+    
+    
+    NSLog(@"pending credit object is: @%@",pendingCredit);
+    
+    [pendingCredit setValue:creditDate.dateValue forKey:@"date"];
+    [pendingCredit setValue:creditDescr.stringValue forKey:@"transDescription"];
+    [pendingCredit setValue:[NSNumber numberWithFloat:creditAmount.floatValue] forKey:@"creditAmount"];  //note need to change to NSDecimal !!!! TODO
+    
+    [pendingCredit setValue:[NSNumber numberWithFloat:creditAmount.floatValue] forKey:@"itemCost"]; //note need to change to NSDecimal !!!! TODO
+    
+    [pendingCredit setValue:[NSNumber numberWithInt:1] forKey:@"saleQuantity"];
+    [pendingCredit setValue:[NSNumber numberWithBool:NO] forKey:@"pending"];    // will not mark this as pending as it will be prepared to be valid non-pending -> ready to be added to MOC later...
+    
+    
+    NSLog(@"pending credit object is: @%@",pendingCredit);
+    
+    
+    
+    
+    //display new credit
+    [crDateDispl setObjectValue:[creditDate dateValue]];
+    [crDescrDispl setStringValue:creditDescr.stringValue];
+    [creditAmountDispl setFloatValue:creditAmount.floatValue];
+    
+    [crTransTotal setFloatValue:creditAmount.floatValue];
+    [crNewBalance setFloatValue:crCurrBalance.floatValue + creditAmount.floatValue];
+    
+}//end add new credit method
+
+
+- (IBAction)processCredit:(id)sender {
+    if (pendingCredit == nil) {
+        //alert error !
+        // TODO
+        
+        return;
+    }//end if
+    
+    
+    NSManagedObjectContext * moc = [[DataManager sharedInstance] managedObjectContext];
+
+    //add credit transaction to main MOC
+    [moc insertObject:pendingCredit];
+    
+    [pendingCredit setValue:[[userSearch selectedObjects] objectAtIndex:0] forKey:@"user"];
+    
+    NSLog(@"pending credit object is: @%@",pendingCredit);
+    
+    NSLog(@"%@",[[userSearch selectedObjects] objectAtIndex:0]);
+    
+    NSError *err = nil;
+    
+    [moc save:&err];
+    
+    [pendingCredit release]; //clear and release current pending credit object
+    pendingCredit = nil;
+    
+    //display cleared
+    [crDateDispl setStringValue:@""];
+    [crDescrDispl setStringValue:@""];
+    [creditAmountDispl setStringValue:@""];
+    
+    [crTransTotal setFloatValue:0.0];
+    [crNewBalance setFloatValue:crCurrBalance.floatValue];
+    
+    [creditDate setObjectValue:[NSDate date]];  // todays date
+    [creditDescr setStringValue:@""];
+    [creditAmount setStringValue:@""];
+    
+    
+    
+    //email User
+    //TODO
+    
+    
+
+}
+
+- (IBAction)cancelNewCredit:(id)sender {
+    //display cleared
+    [crDateDispl setStringValue:@""];
+    [crDescrDispl setStringValue:@""];
+    [creditAmountDispl setStringValue:@""];
+    
+    [crTransTotal setFloatValue:0.0];
+    [crNewBalance setFloatValue:crCurrBalance.floatValue];
+    
+    [creditDate setObjectValue:[NSDate date]];  // todays date
+    [creditDescr setStringValue:@""];
+    [creditAmount setStringValue:@""];
+}
+
+
 
 - (IBAction)activatePOSwindow:(id)sender {
     [window makeKeyAndOrderFront:self];

@@ -14,6 +14,8 @@
 #import "TodayDatePicker.h"
 
 #import "DataManager.h"
+#import "Transaction.h"
+
 
 
 @interface PukkaAccountsAppDelegate : NSObject <NSApplicationDelegate> {
@@ -21,11 +23,48 @@
     NSWindow *window;
   // DataManager *_dataManager;
     NSWindow *manageUsersWindow;
+    
+    Transaction *pendingCredit;
+    TodayDatePicker *creditDate;
+    NSTextField *creditDescr;
+    NSTextField *creditAmount;
+    NSTextField *crDateDispl;
+    NSTextField *crDescrDispl;
+    NSTextField *creditAmountDispl;
+    NSTextField *crTransTotal;
+    NSTextField *crNewBalance;
+    NSTextField *crCurrBalance;
+    NSArrayController *userSearch;
 }
 
 @property (assign) IBOutlet NSWindow *window;
 @property (readonly) DataManager *dataManager;
 @property (assign) IBOutlet NSWindow *manageUsersWindow;
+
+
+@property (nonatomic,retain) Transaction *pendingCredit;
+
+@property (assign) IBOutlet TodayDatePicker *creditDate;
+@property (assign) IBOutlet NSTextField *creditDescr;
+@property (assign) IBOutlet NSTextField *creditAmount;
+
+@property (assign) IBOutlet NSTextField *crDateDispl;
+@property (assign) IBOutlet NSTextField *crDescrDispl;
+@property (assign) IBOutlet NSTextField *creditAmountDispl;
+
+@property (assign) IBOutlet NSTextField *crTransTotal;
+@property (assign) IBOutlet NSTextField *crNewBalance;
+@property (assign) IBOutlet NSTextField *crCurrBalance;
+
+@property (assign) IBOutlet NSArrayController *userSearch;
+
+
+- (IBAction)addNewCredit:(id)sender;
+- (IBAction)processCredit:(id)sender;
+- (IBAction)cancelNewCredit:(id)sender;
+
+
+
 
 - (IBAction)saveAction:sender;
 - (IBAction)activatePOSwindow:(id)sender;
