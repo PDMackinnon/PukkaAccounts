@@ -27,6 +27,8 @@
 		80CCF66914473F6D00F66FA8 /* CJSONDeserializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 80CCF66214473F6D00F66FA8 /* CJSONDeserializer.m */; };
 		80CCF66A14473F6D00F66FA8 /* CJSONScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 80CCF66414473F6D00F66FA8 /* CJSONScanner.m */; };
 		80CCF66B14473F6D00F66FA8 /* CJSONSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 80CCF66614473F6D00F66FA8 /* CJSONSerializer.m */; };
+		80D8E73914596E6D00702575 /* greenbuttonlarge.png in Resources */ = {isa = PBXBuildFile; fileRef = 80D8E73814596E6D00702575 /* greenbuttonlarge.png */; };
+		80F3B0DD14596B5100DE8A29 /* redButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 80F3B0DC14596B5100DE8A29 /* redButton.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +72,8 @@
 		80CCF66414473F6D00F66FA8 /* CJSONScanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJSONScanner.m; sourceTree = "<group>"; };
 		80CCF66514473F6D00F66FA8 /* CJSONSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJSONSerializer.h; sourceTree = "<group>"; };
 		80CCF66614473F6D00F66FA8 /* CJSONSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJSONSerializer.m; sourceTree = "<group>"; };
+		80D8E73814596E6D00702575 /* greenbuttonlarge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = greenbuttonlarge.png; sourceTree = "<group>"; };
+		80F3B0DC14596B5100DE8A29 /* redButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = redButton.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +127,8 @@
 		8066FBAA14432FAD00E48AF1 /* PukkaAccounts */ = {
 			isa = PBXGroup;
 			children = (
+				80F3B0DC14596B5100DE8A29 /* redButton.png */,
+				80D8E73814596E6D00702575 /* greenbuttonlarge.png */,
 				80CCF65C14473F2700F66FA8 /* TouchJSON */,
 				800D3DBC144354B600FC53AF /* TodayDatePicker.h */,
 				800D3DBD144354B600FC53AF /* TodayDatePicker.m */,
@@ -228,6 +234,8 @@
 				8066FBAF14432FAD00E48AF1 /* InfoPlist.strings in Resources */,
 				8066FBB514432FAD00E48AF1 /* Credits.rtf in Resources */,
 				8066FBBB14432FAD00E48AF1 /* MainMenu.xib in Resources */,
+				80F3B0DD14596B5100DE8A29 /* redButton.png in Resources */,
+				80D8E73914596E6D00702575 /* greenbuttonlarge.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

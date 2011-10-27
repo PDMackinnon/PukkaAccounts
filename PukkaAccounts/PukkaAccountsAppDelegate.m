@@ -85,7 +85,7 @@
     
     NSLog(@"pending credit object is: @%@",pendingCredit);
     
-    
+    NSLog(@"amount = %@\n\n\n",[pendingCredit creditAmount]);
     
     
     //display new credit
@@ -123,6 +123,43 @@
     
     [moc save:&err];
     
+    
+    //email User
+    //TODO
+    
+    
+    NSNumberFormatter *_currencyFormatter = [[NSNumberFormatter alloc] init];
+    [_currencyFormatter setNumberStyle:NSNumberFormatterCurrencyStyle];
+    
+    NSString * emailMessage = [NSString stringWithFormat:@"Pukka Print Credit added to your account: %@", [_currencyFormatter stringFromNumber:[pendingCredit creditAmount]]];
+    [_currencyFormatter release];
+    
+    NSString * emailSubj = @"Print%20Credit%20added";
+    
+    NSString * encodedEmailMessage = (NSString *)CFURLCreateStringByAddingPercentEscapes(
+                                                                                         NULL,
+                                                                                         (CFStringRef)emailMessage,
+                                                                                         NULL,
+                                                                                         (CFStringRef)@"!*'();:@&=+$,/?%#[]",
+                                                                                         kCFStringEncodingUTF8 );
+    
+    NSString* emailAddr = [[[userSearch selectedObjects] objectAtIndex:0] emailAddress];
+    
+    NSString* mailToString = [NSString stringWithFormat:@"mailto:%@?subject=%@&body=%@",emailAddr,emailSubj,encodedEmailMessage];
+    
+    
+    NSURL * url = [NSURL URLWithString:mailToString];
+    
+    [[NSWorkspace sharedWorkspace] openURL:url];
+    
+
+    
+    
+    
+    
+    
+// clear current pending from display and from memory    
+    
     [pendingCredit release]; //clear and release current pending credit object
     pendingCredit = nil;
     
@@ -140,11 +177,7 @@
     
     
     
-    //email User
-    //TODO
     
-    
-
 }
 
 - (IBAction)cancelNewCredit:(id)sender {

@@ -7,6 +7,7 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import <Foundation/Foundation.h>
 
 #import "CJSONSerializer.h"
 #import "CJSONDeserializer.h"

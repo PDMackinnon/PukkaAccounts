@@ -37,6 +37,7 @@
 - (IBAction)addSaleTransaction:(id)sender;
 - (IBAction)processSale:(id)sender;
 - (IBAction)cancelPendingSales:(id)sender;
+- (IBAction)insufficientCredit:(id)sender;
 
 
 @end
