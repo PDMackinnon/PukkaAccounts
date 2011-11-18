@@ -8,6 +8,42 @@
 
 #import "PukkaAccountsAppDelegate.h"
 
+@interface PukkaAccountsAppDelegate (internal)
+    
+-(void) addStudioCredit:(float)amount forUser:(NSManagedObject*)currentUser;
+
+@end
+
+@implementation PukkaAccountsAppDelegate (internal)
+
+
+-(void) addStudioCredit:(float)amount forUser:(NSManagedObject*)currentUser {
+    
+    NSManagedObjectContext * moc = [[DataManager sharedInstance] managedObjectContext];
+
+    Transaction* importCredit = [[Transaction alloc] initWithEntity:[NSEntityDescription entityForName:@"Transaction" inManagedObjectContext:moc] insertIntoManagedObjectContext:moc];
+    
+    
+    [importCredit setValue:[NSDate date] forKey:@"date"];                              //today's date
+    [importCredit setValue:@"DJCAD Studio credit" forKey:@"transDescription"];         // describe as studio credit....
+    [importCredit setValue:[NSNumber numberWithFloat: amount] forKey:@"creditAmount"];                             //amount as given
+    
+    [importCredit setValue:[NSNumber numberWithFloat: amount] forKey:@"itemCost"];                                 //amount as given
+            
+    [importCredit setValue:[NSNumber numberWithInt:1] forKey:@"saleQuantity"];
+    [importCredit setValue:[NSNumber numberWithBool:NO] forKey:@"pending"];    // not pending as inserted immediateley
+    
+    [importCredit setValue:currentUser forKey:@"user"];
+    
+    
+    [importCredit release];   //need to consider mamory management....
+    
+}
+
+
+@end
+
+
 @implementation PukkaAccountsAppDelegate
 
 @synthesize manageUsersWindow;
@@ -21,6 +57,10 @@
 @synthesize crNewBalance;
 @synthesize crCurrBalance;
 @synthesize userSearch;
+@synthesize studioCreditView;
+@synthesize studioCreditDescr;
+@synthesize studioCreditAmount;
+@synthesize studioCreditCheckBox;
 @dynamic pendingCredit;
 
 @synthesize window;
@@ -131,7 +171,7 @@
     NSNumberFormatter *_currencyFormatter = [[NSNumberFormatter alloc] init];
     [_currencyFormatter setNumberStyle:NSNumberFormatterCurrencyStyle];
     
-    NSString * emailMessage = [NSString stringWithFormat:@"Pukka Print Credit added to your account: %@", [_currencyFormatter stringFromNumber:[pendingCredit creditAmount]]];
+    NSString * emailMessage = [NSString stringWithFormat:@"DJCAD Print Credit added to your account: %@", [_currencyFormatter stringFromNumber:[pendingCredit creditAmount]]];
     [_currencyFormatter release];
     
     NSString * emailSubj = @"Print%20Credit%20added";
@@ -256,7 +296,6 @@
             [newUser setValue:emailText forKey:@"EmailAddress"];
             [newUser setValue:courseText forKey:@"subjectOfStudy"];     
             
-            //[newUser setValue:yearInt forKey:@"CurrentYearofStudy"];
             NSNumber *yrofStudy = [NSNumber numberWithInteger:[yearInt integerValue]];  
             
             [newUser setValue:yrofStudy forKey:@"CurrentYearofStudy"];
@@ -265,6 +304,75 @@
         }//end for
     }//end if OK button from NSopenPanel 
 }//end import
+
+- (IBAction)importWithCredit:(id)sender {
+    int result;
+    NSArray *fileTypes = [NSArray arrayWithObject:@"json"];
+    NSOpenPanel *openJSONpanel = [NSOpenPanel openPanel];
+    [openJSONpanel setAccessoryView:studioCreditView];
+    
+    result = [openJSONpanel runModalForDirectory:NSHomeDirectory()
+                                            file:nil types:fileTypes];
+    
+    if (result == NSOKButton) {
+        NSArray *filesToOpen = [openJSONpanel filenames];
+        
+        NSString *theFile = [filesToOpen objectAtIndex:0];
+        
+        
+        NSLog(@"the file is: %@",theFile);
+        // NSError * error = [[NSError alloc] init];
+        NSError *error = NULL;
+        
+        NSString *theFileString = [NSString stringWithContentsOfFile:theFile encoding:NSUTF8StringEncoding error:&error];
+        if (nil == theFileString) return;
+        //    NSScanner *scanner = [NSScanner scannerWithString:theFileString];
+        
+        NSData *jsonData = [theFileString dataUsingEncoding:NSUTF8StringEncoding];
+        
+        NSDictionary *importDict = [[CJSONDeserializer deserializer] deserializeAsDictionary:jsonData error:&error];
+        
+        //   NSArray *theArray = [[CJSONDeserializer deserializer] deserializeAsArray:jsonData error:&error];
+        
+        
+        NSArray *usersImport = [importDict objectForKey:@"users"];
+        for (NSDictionary *userDict in usersImport) {
+            NSString *matricText = [userDict objectForKey:@"matric"];
+            NSString *userNameText = [userDict objectForKey:@"userName"];
+            NSString *fullNameText = [userDict objectForKey:@"fullName"];
+            NSString *emailText = [userDict objectForKey:@"email"];
+            NSString *courseText = [userDict objectForKey:@"course"];
+            NSString *yearInt = [userDict objectForKey:@"year"];
+            
+            NSManagedObject *newUser = [NSEntityDescription insertNewObjectForEntityForName:@"User" inManagedObjectContext:[[DataManager sharedInstance] managedObjectContext]];
+            
+            [newUser setValue:matricText forKey:@"MatricNumber"];
+            [newUser setValue:userNameText forKey:@"UserName"];
+            [newUser setValue:fullNameText forKey:@"FullName"];
+            [newUser setValue:emailText forKey:@"EmailAddress"];
+            [newUser setValue:courseText forKey:@"subjectOfStudy"];     
+            
+            NSNumber *yrofStudy = [NSNumber numberWithInteger:[yearInt integerValue]];  
+            
+            [newUser setValue:yrofStudy forKey:@"CurrentYearofStudy"];
+            
+            if ([studioCreditCheckBox state] == NSOnState) {
+                
+                [self addStudioCredit:[studioCreditAmount floatValue] forUser:newUser];
+
+            }
+            
+            
+            
+        }//end for
+    }//end if OK button from NSopenPanel 
+
+    
+    
+}
+    
+    
+    
 
 
 

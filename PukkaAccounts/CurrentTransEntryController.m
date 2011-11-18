@@ -13,6 +13,8 @@
 @synthesize posArrayController;
 @synthesize transactionsController;
 @synthesize userSearch;
+//@synthesize saleProcessButton;
+//@synthesize newBalance;
 
 - (id)init
 {
@@ -58,9 +60,19 @@
     
     
     
-    NSLog(@"new transaction is : %@",newTransaction);
+    // visually affect the main POS process sale button if the resulting balance is in deficit - experiment
+    /*
+    NSLog(@"new balance = %f",[newBalance floatValue]);
     
-    
+    if ([newBalance floatValue] < 0 ) {
+        [saleProcessButton setState:NSOffState];
+    }
+    else
+    {
+        [saleProcessButton setState:NSOnState];
+    }
+    */
+    //result is that we need to use bindings..... as update is not dynamic enough
     
     
 }//end add Sale
@@ -93,7 +105,7 @@
                                                                                       (CFStringRef)@"!*'();:@&=+$,/?%#[]",
                                                                                       kCFStringEncodingUTF8 );
     
-    NSMutableString * emailMessage = [NSMutableString stringWithFormat:@"Pukka Print Sales from your account:\n\n"];
+    NSMutableString * emailMessage = [NSMutableString stringWithFormat:@"DJCAD Print Sales from your account:\n\n"];
         
     NSString* emailAddr = [[[userSearch selectedObjects] objectAtIndex:0] emailAddress];
 

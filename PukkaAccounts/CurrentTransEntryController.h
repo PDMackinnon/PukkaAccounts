@@ -24,6 +24,8 @@
 @private
     
     NSArrayController *userSearch;
+//    NSButton *saleProcessButton;
+//    NSTextField *newBalance;
     SalesController *posArrayController;
     TransController *transactionsController;
 }
@@ -33,6 +35,8 @@
 @property (assign) IBOutlet TransController *transactionsController;
 @property (assign) IBOutlet NSArrayController *userSearch;
 
+//@property (assign) IBOutlet NSButton *saleProcessButton;
+//@property (assign) IBOutlet NSTextField *newBalance;
 
 - (IBAction)addSaleTransaction:(id)sender;
 - (IBAction)processSale:(id)sender;

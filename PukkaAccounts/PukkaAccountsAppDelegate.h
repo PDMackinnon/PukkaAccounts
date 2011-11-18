@@ -36,6 +36,10 @@
     NSTextField *crNewBalance;
     NSTextField *crCurrBalance;
     NSArrayController *userSearch;
+    NSView *studioCreditView;
+    NSTextField *studioCreditDescr;
+    NSTextField *studioCreditAmount;
+    NSButton *studioCreditCheckBox;
 }
 
 @property (assign) IBOutlet NSWindow *window;
@@ -59,6 +63,11 @@
 
 @property (assign) IBOutlet NSArrayController *userSearch;
 
+@property (assign) IBOutlet NSView *studioCreditView;
+@property (assign) IBOutlet NSTextField *studioCreditDescr;
+@property (assign) IBOutlet NSTextField *studioCreditAmount;
+@property (assign) IBOutlet NSButton *studioCreditCheckBox;
+
 
 - (IBAction)addNewCredit:(id)sender;
 - (IBAction)processCredit:(id)sender;
@@ -71,5 +80,6 @@
 - (IBAction)activatePOSwindow:(id)sender;
 - (IBAction)activateManageUsersWin:(id)sender;
 - (IBAction)importJSON:(id)sender;
+- (IBAction)importWithCredit:(id)sender;
 
 @end

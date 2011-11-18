@@ -28,6 +28,7 @@
 		80CCF66A14473F6D00F66FA8 /* CJSONScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 80CCF66414473F6D00F66FA8 /* CJSONScanner.m */; };
 		80CCF66B14473F6D00F66FA8 /* CJSONSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 80CCF66614473F6D00F66FA8 /* CJSONSerializer.m */; };
 		80D8E73914596E6D00702575 /* greenbuttonlarge.png in Resources */ = {isa = PBXBuildFile; fileRef = 80D8E73814596E6D00702575 /* greenbuttonlarge.png */; };
+		80E281B21459C25300930C9F /* CurrentSaleState.m in Sources */ = {isa = PBXBuildFile; fileRef = 80E281B11459C25300930C9F /* CurrentSaleState.m */; };
 		80F3B0DD14596B5100DE8A29 /* redButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 80F3B0DC14596B5100DE8A29 /* redButton.png */; };
 /* End PBXBuildFile section */
 
@@ -73,6 +74,8 @@
 		80CCF66514473F6D00F66FA8 /* CJSONSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJSONSerializer.h; sourceTree = "<group>"; };
 		80CCF66614473F6D00F66FA8 /* CJSONSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJSONSerializer.m; sourceTree = "<group>"; };
 		80D8E73814596E6D00702575 /* greenbuttonlarge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = greenbuttonlarge.png; sourceTree = "<group>"; };
+		80E281B01459C25300930C9F /* CurrentSaleState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurrentSaleState.h; sourceTree = "<group>"; };
+		80E281B11459C25300930C9F /* CurrentSaleState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CurrentSaleState.m; sourceTree = "<group>"; };
 		80F3B0DC14596B5100DE8A29 /* redButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = redButton.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -150,6 +153,8 @@
 				801A1B0B1444A568000A3BF0 /* SalesController.m */,
 				800D3DC5144355F900FC53AF /* TransController.h */,
 				800D3DC6144355F900FC53AF /* TransController.m */,
+				80E281B01459C25300930C9F /* CurrentSaleState.h */,
+				80E281B11459C25300930C9F /* CurrentSaleState.m */,
 				8066FBAB14432FAD00E48AF1 /* Supporting Files */,
 			);
 			path = PukkaAccounts;
@@ -262,6 +267,7 @@
 				80CCF66914473F6D00F66FA8 /* CJSONDeserializer.m in Sources */,
 				80CCF66A14473F6D00F66FA8 /* CJSONScanner.m in Sources */,
 				80CCF66B14473F6D00F66FA8 /* CJSONSerializer.m in Sources */,
+				80E281B21459C25300930C9F /* CurrentSaleState.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
