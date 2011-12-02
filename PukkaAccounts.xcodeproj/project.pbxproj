@@ -15,6 +15,7 @@
 		801A1B0514449C5E000A3BF0 /* CurrentTransEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 801A1B0414449C5E000A3BF0 /* CurrentTransEntry.m */; };
 		801A1B091444A4C2000A3BF0 /* CurrentTransEntryController.m in Sources */ = {isa = PBXBuildFile; fileRef = 801A1B081444A4C2000A3BF0 /* CurrentTransEntryController.m */; };
 		801A1B0C1444A569000A3BF0 /* SalesController.m in Sources */ = {isa = PBXBuildFile; fileRef = 801A1B0B1444A568000A3BF0 /* SalesController.m */; };
+		8054BC6A1488D680006784AD /* LabelPrintView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8054BC691488D680006784AD /* LabelPrintView.m */; };
 		8066FBA514432FAD00E48AF1 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8066FBA414432FAD00E48AF1 /* Cocoa.framework */; };
 		8066FBAF14432FAD00E48AF1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8066FBAD14432FAD00E48AF1 /* InfoPlist.strings */; };
 		8066FBB214432FAD00E48AF1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8066FBB114432FAD00E48AF1 /* main.m */; };
@@ -51,6 +52,8 @@
 		801A1B081444A4C2000A3BF0 /* CurrentTransEntryController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CurrentTransEntryController.m; sourceTree = "<group>"; };
 		801A1B0A1444A568000A3BF0 /* SalesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SalesController.h; sourceTree = "<group>"; };
 		801A1B0B1444A568000A3BF0 /* SalesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SalesController.m; sourceTree = "<group>"; };
+		8054BC681488D680006784AD /* LabelPrintView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LabelPrintView.h; sourceTree = "<group>"; };
+		8054BC691488D680006784AD /* LabelPrintView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LabelPrintView.m; sourceTree = "<group>"; };
 		8066FBA014432FAD00E48AF1 /* PukkaAccounts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PukkaAccounts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8066FBA414432FAD00E48AF1 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		8066FBA714432FAD00E48AF1 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -161,6 +164,8 @@
 				80E281B01459C25300930C9F /* CurrentSaleState.h */,
 				80E281B11459C25300930C9F /* CurrentSaleState.m */,
 				8066FBAB14432FAD00E48AF1 /* Supporting Files */,
+				8054BC681488D680006784AD /* LabelPrintView.h */,
+				8054BC691488D680006784AD /* LabelPrintView.m */,
 			);
 			path = PukkaAccounts;
 			sourceTree = "<group>";
@@ -276,6 +281,7 @@
 				80CCF66A14473F6D00F66FA8 /* CJSONScanner.m in Sources */,
 				80CCF66B14473F6D00F66FA8 /* CJSONSerializer.m in Sources */,
 				80E281B21459C25300930C9F /* CurrentSaleState.m in Sources */,
+				8054BC6A1488D680006784AD /* LabelPrintView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

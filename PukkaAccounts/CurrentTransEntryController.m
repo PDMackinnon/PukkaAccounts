@@ -281,6 +281,17 @@
 }
 
 
+- (IBAction)printLabel:(id)sender {
+    
+    
+    
+    NSView* labelPrintView = [[LabelPrintView alloc] initWithUser:[[userSearch selectedObjects] objectAtIndex:0]];
+    
+    [labelPrintView print:self];
+    
+    [labelPrintView release];
+}
+
 
 
 
