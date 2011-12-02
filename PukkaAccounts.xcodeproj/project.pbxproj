@@ -22,6 +22,8 @@
 		8066FBB814432FAD00E48AF1 /* PukkaAccountsAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8066FBB714432FAD00E48AF1 /* PukkaAccountsAppDelegate.m */; };
 		8066FBBB14432FAD00E48AF1 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8066FBB914432FAD00E48AF1 /* MainMenu.xib */; };
 		8066FBBE14432FAD00E48AF1 /* PukkaAccounts.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8066FBBC14432FAD00E48AF1 /* PukkaAccounts.xcdatamodeld */; };
+		80A4972C147C0EB10047263F /* pukka_icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 80A4972B147C0EB10047263F /* pukka_icon.icns */; };
+		80CA5DDB1476B03C00D55DD2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 80CA5DD91476B03C00D55DD2 /* Localizable.strings */; };
 		80CCF66714473F6D00F66FA8 /* CDataScanner_Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 80CCF65E14473F6D00F66FA8 /* CDataScanner_Extensions.m */; };
 		80CCF66814473F6D00F66FA8 /* CDataScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 80CCF66014473F6D00F66FA8 /* CDataScanner.m */; };
 		80CCF66914473F6D00F66FA8 /* CJSONDeserializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 80CCF66214473F6D00F66FA8 /* CJSONDeserializer.m */; };
@@ -63,6 +65,8 @@
 		8066FBB714432FAD00E48AF1 /* PukkaAccountsAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PukkaAccountsAppDelegate.m; sourceTree = "<group>"; };
 		8066FBBA14432FAD00E48AF1 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		8066FBBD14432FAD00E48AF1 /* PukkaAccounts.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PukkaAccounts.xcdatamodel; sourceTree = "<group>"; };
+		80A4972B147C0EB10047263F /* pukka_icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = pukka_icon.icns; sourceTree = "<group>"; };
+		80CA5DDA1476B03C00D55DD2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		80CCF65D14473F6D00F66FA8 /* CDataScanner_Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDataScanner_Extensions.h; sourceTree = "<group>"; };
 		80CCF65E14473F6D00F66FA8 /* CDataScanner_Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDataScanner_Extensions.m; sourceTree = "<group>"; };
 		80CCF65F14473F6D00F66FA8 /* CDataScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDataScanner.h; sourceTree = "<group>"; };
@@ -94,6 +98,7 @@
 		8066FB9514432FAD00E48AF1 = {
 			isa = PBXGroup;
 			children = (
+				80A4972B147C0EB10047263F /* pukka_icon.icns */,
 				8066FBAA14432FAD00E48AF1 /* PukkaAccounts */,
 				8066FBA314432FAD00E48AF1 /* Frameworks */,
 				8066FBA114432FAD00E48AF1 /* Products */,
@@ -163,6 +168,7 @@
 		8066FBAB14432FAD00E48AF1 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				80CA5DD91476B03C00D55DD2 /* Localizable.strings */,
 				8066FBAC14432FAD00E48AF1 /* PukkaAccounts-Info.plist */,
 				8066FBAD14432FAD00E48AF1 /* InfoPlist.strings */,
 				8066FBB014432FAD00E48AF1 /* PukkaAccounts-Prefix.pch */,
@@ -241,6 +247,8 @@
 				8066FBBB14432FAD00E48AF1 /* MainMenu.xib in Resources */,
 				80F3B0DD14596B5100DE8A29 /* redButton.png in Resources */,
 				80D8E73914596E6D00702575 /* greenbuttonlarge.png in Resources */,
+				80CA5DDB1476B03C00D55DD2 /* Localizable.strings in Resources */,
+				80A4972C147C0EB10047263F /* pukka_icon.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,13 +306,21 @@
 			name = MainMenu.xib;
 			sourceTree = "<group>";
 		};
+		80CA5DD91476B03C00D55DD2 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				80CA5DDA1476B03C00D55DD2 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		8066FBBF14432FAD00E48AF1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
@@ -322,13 +338,14 @@
 		8066FBC014432FAD00E48AF1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
 			};
 			name = Release;

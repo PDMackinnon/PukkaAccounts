@@ -97,7 +97,7 @@
     [_dateFormatter setDateStyle:NSDateFormatterMediumStyle];
     
 
-    NSString * emailSubj = @"Printing completed. Please Collect.";
+    NSString * emailSubj = NSLocalizedString(@"Printing completed. Please Collect.", @"email subject field for printing completed message");
     NSString * encodedEmailSubj = (NSString *)CFURLCreateStringByAddingPercentEscapes(
                                                                                       NULL,
                                                                                       (CFStringRef)emailSubj,
@@ -105,7 +105,7 @@
                                                                                       (CFStringRef)@"!*'();:@&=+$,/?%#[]",
                                                                                       kCFStringEncodingUTF8 );
     
-    NSMutableString * emailMessage = [NSMutableString stringWithFormat:@"DJCAD Print Sales from your account:\n\n"];
+    NSMutableString * emailMessage = [NSMutableString stringWithFormat:NSLocalizedString(@"DJCAD Print Sales from your account:\n\n",@"email message heading for completed prints, processed sale")];
         
     NSString* emailAddr = [[[userSearch selectedObjects] objectAtIndex:0] emailAddress];
 
@@ -157,7 +157,7 @@
     
     NSLog(@"transactions .....%@",[transactionsController valueForKeyPath:@"arrangedObjects.@sum.creditAmount"]);
     
-    [emailMessage appendFormat:@"\n\n\nNew balance Total is:\t %@",[_currencyFormatter stringFromNumber:[transactionsController valueForKeyPath:@"arrangedObjects.@sum.creditAmount"]]];
+    [emailMessage appendFormat:NSLocalizedString(@"\n\n\nNew balance Total is:\t %@",@"email message footer for completed prints, processed sale"),[_currencyFormatter stringFromNumber:[transactionsController valueForKeyPath:@"arrangedObjects.@sum.creditAmount"]]];
     
     NSString * encodedEmailMessage = (NSString *)CFURLCreateStringByAddingPercentEscapes(
                                                                                          NULL,
@@ -220,7 +220,7 @@
     [_dateFormatter setDateStyle:NSDateFormatterMediumStyle];
     
     
-    NSString * emailSubj = @"Printing on hold. Please supply account credit";
+    NSString * emailSubj = NSLocalizedString(@"Printing on hold. Please supply account credit",@"email subject field for insufficient credit message, unprocessed sale");
     NSString * encodedEmailSubj = (NSString *)CFURLCreateStringByAddingPercentEscapes(
                                                                                       NULL,
                                                                                       (CFStringRef)emailSubj,
@@ -228,7 +228,7 @@
                                                                                       (CFStringRef)@"!*'();:@&=+$,/?%#[]",
                                                                                       kCFStringEncodingUTF8 );
     
-    NSMutableString * emailMessage = [NSMutableString stringWithFormat:@"Pending items that exceed the available balance:\n\n"];
+    NSMutableString * emailMessage = [NSMutableString stringWithFormat:NSLocalizedString(@"Pending items that exceed the available balance:\n\n",@"email message for insuficcient credit heading, unprocessed items")];
     
     NSString* emailAddr = [[[userSearch selectedObjects] objectAtIndex:0] emailAddress];
     
@@ -249,7 +249,7 @@
     }//end iterate for loop
 
     
-    [emailMessage appendFormat:@"\n\n\nCurrent balance available is:\t %@",[_currencyFormatter stringFromNumber:[transactionsController valueForKeyPath:@"arrangedObjects.@sum.creditAmount"]]];
+    [emailMessage appendFormat:NSLocalizedString(@"\n\n\nCurrent balance available is:\t %@",@"email message footer for unprocessed sale indicating balance available"),[_currencyFormatter stringFromNumber:[transactionsController valueForKeyPath:@"arrangedObjects.@sum.creditAmount"]]];
     
     NSString * encodedEmailMessage = (NSString *)CFURLCreateStringByAddingPercentEscapes(
                                                                                          NULL,

@@ -171,10 +171,10 @@
     NSNumberFormatter *_currencyFormatter = [[NSNumberFormatter alloc] init];
     [_currencyFormatter setNumberStyle:NSNumberFormatterCurrencyStyle];
     
-    NSString * emailMessage = [NSString stringWithFormat:@"DJCAD Print Credit added to your account: %@", [_currencyFormatter stringFromNumber:[pendingCredit creditAmount]]];
+    NSString * emailMessage = [NSString stringWithFormat:NSLocalizedString(@"DJCAD Print Credit added to your account: %@",@"email message for print credit added"), [_currencyFormatter stringFromNumber:[pendingCredit creditAmount]]];
     [_currencyFormatter release];
     
-    NSString * emailSubj = @"Print%20Credit%20added";
+    NSString * emailSubj = NSLocalizedString(@"Print%20Credit%20added",@"email subject for print credit added");
     
     NSString * encodedEmailMessage = (NSString *)CFURLCreateStringByAddingPercentEscapes(
                                                                                          NULL,

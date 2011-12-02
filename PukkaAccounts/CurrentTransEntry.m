@@ -11,10 +11,10 @@
 
 @implementation CurrentTransEntry
 
-@synthesize transDescription;
-@synthesize itemCost;
-@synthesize saleQuantity;
-@synthesize saleDate;
+@synthesize transDescription = _transDescription;
+@synthesize itemCost = _itemCost;
+@synthesize saleQuantity = _saleQuantity;
+@synthesize saleDate = _saleDate;
 
 
 -(NSDecimalNumber *)saleAmountValue {
@@ -25,15 +25,15 @@
   //  NSDecimalNumber *q = [NSDecimalNumber decimalNumberWithDecimal:[self.saleQuantity decimalValue]];
   //  return ([self.itemCost decimalNumberByMultiplyingBy:q]);
     
-    NSLog(@"%@",[itemCost className]);
+    NSLog(@"%@",[_itemCost className]);
     
 //   _value = [self.itemCost decimalNumberByMultiplyingBy:[NSDecimalNumber decimalNumberWithString:@"4.0"]];
    
 //   return [self.itemCost decimalNumberByMultiplyingBy:[NSDecimalNumber decimalNumberWithString:@"4.0"]];
    
     
-    float itemCostFloat = [itemCost floatValue];
-    float result = -1 * itemCostFloat * [saleQuantity intValue];
+    float itemCostFloat = [_itemCost floatValue];
+    float result = -1 * itemCostFloat * [_saleQuantity intValue];
     NSLog(@"result = %f",result);
     
     return [NSDecimalNumber decimalNumberWithDecimal:[[NSNumber numberWithFloat:result] decimalValue] ];

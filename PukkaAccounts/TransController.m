@@ -23,6 +23,7 @@
 
 -(void)awakeFromNib {
     [self setFilterPredicate:[NSPredicate predicateWithFormat:@"pending == NO"]];
+    [self setSortDescriptors:[NSArray arrayWithObject:[[NSSortDescriptor alloc] initWithKey:@"date" ascending:YES]]]; //sort by date acending
 }
 
 
