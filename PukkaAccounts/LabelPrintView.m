@@ -54,22 +54,35 @@
         self.courseString = [NSString stringWithString:[user valueForKey:@"subjectOfStudy"]];
         self.matricString = [NSString stringWithString:[user valueForKey:@"matricNumber"]];
         self.emailString = [NSString stringWithString:[user valueForKey:@"emailAddress"]];
+        
+        
+  
 
         
+      
+
         
+        _attributes = [[NSMutableDictionary alloc] init];
         
-        self.attributes = [[NSMutableDictionary alloc] init];
+   
+        
         NSFont *font = [NSFont fontWithName:@"Helvetica" size:16.0];
         self.lineHeight = [font capHeight] * 1.7;
         [self.attributes setObject:font forKey:NSFontAttributeName];
+        
+     
         
         
         
         NSMutableParagraphStyle *paragraph = [[NSParagraphStyle defaultParagraphStyle] mutableCopy];
         [paragraph setAlignment:NSCenterTextAlignment];
+        
+        
         [self.attributes setObject:paragraph forKey:NSParagraphStyleAttributeName];
         
         
+        
+    
         
         
         
@@ -86,6 +99,9 @@
     [_matricString release];
     [_emailString release];
     [_attributes release];
+    
+    
+
 }
 
 
