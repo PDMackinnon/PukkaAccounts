@@ -37,12 +37,13 @@
     NSManagedObject *newTransaction = [[Transaction alloc] initWithEntity:[NSEntityDescription entityForName:@"Transaction" inManagedObjectContext:moc] insertIntoManagedObjectContext:moc];
     
     
-    //debug bad date...
+    //debug bad date... ?? fixed ! 12-1-2012
     
-    NSLog(@"date = %@",[[self content] valueForKey:@"saleDate"]);
+ //   NSLog(@"date = %@",[[self content] valueForKey:@"saleDate"]);
     
-  //  [newTransaction setValue:[[self content] valueForKey:@"saleDate"] forKey:@"date"];
-    [newTransaction setValue: [NSDate date] forKey:@"date"];
+    [newTransaction setValue:[[self content] valueForKey:@"saleDate"] forKey:@"date"];
+  
+    //  [newTransaction setValue: [NSDate date] forKey:@"date"];
 
    
     
@@ -204,7 +205,7 @@
     [[self content] setValue:[NSDate date] forKey:@"saleDate"];  // todays date
     [[self content] setValue:[NSNumber numberWithInt:1] forKey:@"saleQuantity"];
     [[self content] setValue:@"" forKey:@"transDescription"];
-    [[self content] setValue:@"" forKey:@"itemCost"];
+    [[self content] setValue:[NSDecimalNumber zero] forKey:@"itemCost"];
 
     
 }

@@ -1612,7 +1612,7 @@
 															<object class="NSTextField" id="1000552629">
 																<reference key="NSNextResponder" ref="838344659"/>
 																<int key="NSvFlags">268</int>
-																<string key="NSFrame">{{204, 366}, {288, 22}}</string>
+																<string key="NSFrame">{{205, 366}, {288, 22}}</string>
 																<reference key="NSSuperview" ref="838344659"/>
 																<reference key="NSWindow"/>
 																<reference key="NSNextKeyView" ref="640702200"/>
@@ -1889,7 +1889,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA</b
 															<object class="NSButton" id="774566636">
 																<reference key="NSNextResponder" ref="838344659"/>
 																<int key="NSvFlags">268</int>
-																<string key="NSFrame">{{637, 357}, {35, 35}}</string>
+																<string key="NSFrame">{{637, 358}, {35, 35}}</string>
 																<reference key="NSSuperview" ref="838344659"/>
 																<reference key="NSWindow"/>
 																<reference key="NSNextKeyView" ref="1071913208"/>
@@ -2082,6 +2082,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA</b
 																				<bool key="EncodedWithXMLCoder">YES</bool>
 																				<string>allowsFloats</string>
 																				<string>formatterBehavior</string>
+																				<string>generatesDecimalNumbers</string>
 																				<string>lenient</string>
 																				<string>locale</string>
 																				<string>negativeInfinitySymbol</string>
@@ -2093,6 +2094,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA</b
 																				<bool key="EncodedWithXMLCoder">YES</bool>
 																				<boolean value="YES"/>
 																				<integer value="1040"/>
+																				<boolean value="YES"/>
 																				<boolean value="YES"/>
 																				<reference ref="904490773"/>
 																				<string>-∞</string>
@@ -2665,6 +2667,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA</b
 														<string key="NSFrame">{{1, 119}, {685, 15}}</string>
 														<reference key="NSSuperview" ref="271800656"/>
 														<reference key="NSWindow"/>
+														<reference key="NSNextKeyView"/>
 														<int key="NSsFlags">1</int>
 														<reference key="NSTarget" ref="271800656"/>
 														<string key="NSAction">_doScroller:</string>
@@ -6795,16 +6798,16 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA</b
 							<reference ref="691425262"/>
 							<reference ref="333478234"/>
 							<reference ref="640702200"/>
-							<reference ref="595592100"/>
 							<reference ref="443211846"/>
-							<reference ref="774566636"/>
 							<reference ref="366543723"/>
 							<reference ref="449661585"/>
 							<reference ref="273663091"/>
-							<reference ref="1000552629"/>
 							<reference ref="120440906"/>
 							<reference ref="523169648"/>
 							<reference ref="449599449"/>
+							<reference ref="1000552629"/>
+							<reference ref="774566636"/>
+							<reference ref="595592100"/>
 						</object>
 						<reference key="parent" ref="373681881"/>
 					</object>
@@ -9817,7 +9820,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA</b
 					<string>CurrentTransEntryController</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<integer value="1041"/>
+					<integer value="1040"/>
 					<boolean value="YES"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>SalesController</string>
