@@ -8,6 +8,25 @@
 
 #import "CurrentTransEntryController.h"
 
+@interface CurrentTransEntryController(private)
+-(void)clearInputs;
+@end
+
+@implementation CurrentTransEntryController(private)
+-(void)clearInputs {
+    //clear inputs
+    [[self content] setValue:[NSDate date] forKey:@"saleDate"];  // todays date
+    [[self content] setValue:[NSNumber numberWithInt:1] forKey:@"saleQuantity"];
+    [[self content] setValue:@"" forKey:@"transDescription"];
+    [[self content] setValue:[NSDecimalNumber zero] forKey:@"itemCost"];
+    
+    
+}
+
+
+@end
+//end private methods category
+
 
 @implementation CurrentTransEntryController
 @synthesize posArrayController;
@@ -15,6 +34,11 @@
 @synthesize userSearch;
 //@synthesize saleProcessButton;
 //@synthesize newBalance;
+
+
+
+
+
 
 - (id)init
 {
@@ -182,12 +206,7 @@
     NSLog(@"%@",[posArrayController arrangedObjects]);
     
     //clear inputs
-    
-    [[self content] setValue:[NSDate date] forKey:@"saleDate"];  // todays date
-    [[self content] setValue:[NSNumber numberWithInt:1] forKey:@"saleQuantity"];
-    [[self content] setValue:@"" forKey:@"transDescription"];
-    [[self content] setValue:@"" forKey:@"itemCost"];
-     
+    [self clearInputs];     
     
 }//end process sale
 
@@ -202,10 +221,7 @@
       NSMakeRange(0, [[posArrayController arrangedObjects] count])]];   //removes all pending objects via posarraycontroller
 
     //clear inputs
-    [[self content] setValue:[NSDate date] forKey:@"saleDate"];  // todays date
-    [[self content] setValue:[NSNumber numberWithInt:1] forKey:@"saleQuantity"];
-    [[self content] setValue:@"" forKey:@"transDescription"];
-    [[self content] setValue:[NSDecimalNumber zero] forKey:@"itemCost"];
+    [self clearInputs];
 
     
 }
@@ -271,15 +287,12 @@
     
     
     //clear inputs
-    
-    [[self content] setValue:[NSDate date] forKey:@"saleDate"];  // todays date
-    [[self content] setValue:[NSNumber numberWithInt:1] forKey:@"saleQuantity"];
-    [[self content] setValue:@"" forKey:@"transDescription"];
-    [[self content] setValue:@"" forKey:@"itemCost"];
-    
-    
+    [self clearInputs];
+        
     
 }
+
+
 
 
 - (IBAction)printLabel:(id)sender {
