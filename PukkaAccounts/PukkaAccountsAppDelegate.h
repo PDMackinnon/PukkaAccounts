@@ -45,6 +45,7 @@
 @property (assign) IBOutlet NSWindow *window;
 @property (readonly) DataManager *dataManager;
 @property (assign) IBOutlet NSWindow *manageUsersWindow;
+@property (assign) IBOutlet NSWindow *studioCreditManagerWindow;
 
 
 @property (nonatomic,retain) Transaction *pendingCredit;
@@ -74,6 +75,7 @@
 - (IBAction)cancelNewCredit:(id)sender;
 
 
+- (IBAction)activateStudioCreditWindow:(id)sender;
 
 
 - (IBAction)saveAction:sender;

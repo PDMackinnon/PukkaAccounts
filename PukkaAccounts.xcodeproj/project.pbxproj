@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		80038DEA15207B420009688B /* StudioCredit.m in Sources */ = {isa = PBXBuildFile; fileRef = 80038DE915207B420009688B /* StudioCredit.m */; };
+		80038DEE15207CBA0009688B /* StudioCreditController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80038DED15207CBA0009688B /* StudioCreditController.m */; };
 		800D3DBA144338DA00FC53AF /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 800D3DB9144338DA00FC53AF /* DataManager.m */; };
 		800D3DBE144354B600FC53AF /* TodayDatePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 800D3DBD144354B600FC53AF /* TodayDatePicker.m */; };
 		800D3DC11443550800FC53AF /* Transaction.m in Sources */ = {isa = PBXBuildFile; fileRef = 800D3DC01443550800FC53AF /* Transaction.m */; };
@@ -36,6 +38,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		80038DE815207B420009688B /* StudioCredit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StudioCredit.h; sourceTree = "<group>"; };
+		80038DE915207B420009688B /* StudioCredit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StudioCredit.m; sourceTree = "<group>"; };
+		80038DEC15207CB90009688B /* StudioCreditController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StudioCreditController.h; sourceTree = "<group>"; };
+		80038DED15207CBA0009688B /* StudioCreditController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StudioCreditController.m; sourceTree = "<group>"; };
 		800D3DB8144338DA00FC53AF /* DataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataManager.h; sourceTree = "<group>"; };
 		800D3DB9144338DA00FC53AF /* DataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataManager.m; sourceTree = "<group>"; };
 		800D3DBC144354B600FC53AF /* TodayDatePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TodayDatePicker.h; sourceTree = "<group>"; };
@@ -166,6 +172,10 @@
 				8066FBAB14432FAD00E48AF1 /* Supporting Files */,
 				8054BC681488D680006784AD /* LabelPrintView.h */,
 				8054BC691488D680006784AD /* LabelPrintView.m */,
+				80038DE815207B420009688B /* StudioCredit.h */,
+				80038DE915207B420009688B /* StudioCredit.m */,
+				80038DEC15207CB90009688B /* StudioCreditController.h */,
+				80038DED15207CBA0009688B /* StudioCreditController.m */,
 			);
 			path = PukkaAccounts;
 			sourceTree = "<group>";
@@ -225,6 +235,9 @@
 /* Begin PBXProject section */
 		8066FB9714432FAD00E48AF1 /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
 			buildConfigurationList = 8066FB9A14432FAD00E48AF1 /* Build configuration list for PBXProject "PukkaAccounts" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
@@ -282,6 +295,8 @@
 				80CCF66B14473F6D00F66FA8 /* CJSONSerializer.m in Sources */,
 				80E281B21459C25300930C9F /* CurrentSaleState.m in Sources */,
 				8054BC6A1488D680006784AD /* LabelPrintView.m in Sources */,
+				80038DEA15207B420009688B /* StudioCredit.m in Sources */,
+				80038DEE15207CBA0009688B /* StudioCreditController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

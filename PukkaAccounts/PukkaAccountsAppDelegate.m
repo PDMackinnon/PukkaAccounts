@@ -47,6 +47,7 @@
 @implementation PukkaAccountsAppDelegate
 
 @synthesize manageUsersWindow;
+@synthesize studioCreditManagerWindow;
 @synthesize creditDate;
 @synthesize creditDescr;
 @synthesize creditAmount;
@@ -76,6 +77,7 @@
 -(void)awakeFromNib {
     [window setExcludedFromWindowsMenu:YES];
     [manageUsersWindow setExcludedFromWindowsMenu:YES];
+    [studioCreditManagerWindow setExcludedFromWindowsMenu:YES];
 }
 
 
@@ -234,6 +236,10 @@
     [creditAmount setStringValue:@""];
 }
 
+- (IBAction)activateStudioCreditWindow:(id)sender {
+    [studioCreditManagerWindow makeKeyAndOrderFront:self];
+}
+
 
 
 - (IBAction)activatePOSwindow:(id)sender {
@@ -367,6 +373,11 @@
         }//end for
     }//end if OK button from NSopenPanel 
 
+    //TODO: should reset the studiocreditview contents to defaults
+    studioCreditDescr.stringValue = @"Studio Credit";
+    studioCreditAmount.objectValue = nil;
+    studioCreditCheckBox.state = NSOnState;
+    
     
     
 }
