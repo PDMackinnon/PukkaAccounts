@@ -39,33 +39,15 @@
     if (self) {
         //init code
         
-        //test code example for print
-        //TODO
-        //actual code to derive the contents from core data objects
-        
-    //    self.nameString = @"Christina Munro";
-    //    self.courseString = @"GRDE3";
-    //    self.matricString = @"U80011205";
-    //    self.emailString = @"C.L.Munro@dundee.ac.uk";
-        
-        
-        
         self.nameString = [NSString stringWithFormat:@"%@",[user valueForKey:@"fullName"]];
         self.courseString = [NSString stringWithString:[user valueForKey:@"subjectOfStudy"]];
         self.matricString = [NSString stringWithString:[user valueForKey:@"matricNumber"]];
         self.emailString = [NSString stringWithString:[user valueForKey:@"emailAddress"]];
         
         
-  
-
-        
-      
-
-        
         _attributes = [[NSMutableDictionary alloc] init];
         
    
-        
         NSFont *font = [NSFont fontWithName:@"Helvetica" size:16.0];
         self.lineHeight = [font capHeight] * 1.7;
         [self.attributes setObject:font forKey:NSFontAttributeName];

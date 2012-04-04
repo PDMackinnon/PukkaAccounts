@@ -18,7 +18,9 @@
     [[self content] setValue:[NSDate date] forKey:@"saleDate"];  // todays date
     [[self content] setValue:[NSNumber numberWithInt:1] forKey:@"saleQuantity"];
     [[self content] setValue:@"" forKey:@"transDescription"];
-    [[self content] setValue:[NSDecimalNumber zero] forKey:@"itemCost"];
+    [[self content] setValue:nil forKey:@"itemCost"];
+
+ //   [[self content] setValue:[NSDecimalNumber zero] forKey:@"itemCost"];
     
     
 }

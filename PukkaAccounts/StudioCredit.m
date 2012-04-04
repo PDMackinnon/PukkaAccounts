@@ -12,4 +12,24 @@
 @synthesize descriptionTextField;
 @synthesize amountTextField;
 
+@synthesize creditDescription = _creditDescription;
+@synthesize creditAmount = _creditAmount;
+
+
+
+- (id)init
+{
+    self = [super init];
+    if (self) {
+        // Initialization code here.
+        self.creditAmount = nil;
+        
+        self.creditDescription = @"Studio Credit";      
+        
+    }
+    
+    return self;
+}
+
+
 @end

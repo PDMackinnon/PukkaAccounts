@@ -12,4 +12,8 @@
 @property (assign) IBOutlet NSTextField *descriptionTextField;
 @property (assign) IBOutlet NSTextField *amountTextField;
 
+@property (nonatomic, retain) NSString * creditDescription;
+@property (nonatomic, retain) NSDecimalNumber * creditAmount;
+
+
 @end

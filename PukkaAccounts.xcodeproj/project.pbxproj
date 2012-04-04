@@ -26,6 +26,7 @@
 		8066FBBB14432FAD00E48AF1 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8066FBB914432FAD00E48AF1 /* MainMenu.xib */; };
 		8066FBBE14432FAD00E48AF1 /* PukkaAccounts.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8066FBBC14432FAD00E48AF1 /* PukkaAccounts.xcdatamodeld */; };
 		80A4972C147C0EB10047263F /* pukka_icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 80A4972B147C0EB10047263F /* pukka_icon.icns */; };
+		80ADE971152C66E50092DBE8 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80ADE970152C66E50092DBE8 /* WebKit.framework */; };
 		80CA5DDB1476B03C00D55DD2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 80CA5DD91476B03C00D55DD2 /* Localizable.strings */; };
 		80CCF66714473F6D00F66FA8 /* CDataScanner_Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 80CCF65E14473F6D00F66FA8 /* CDataScanner_Extensions.m */; };
 		80CCF66814473F6D00F66FA8 /* CDataScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 80CCF66014473F6D00F66FA8 /* CDataScanner.m */; };
@@ -75,6 +76,7 @@
 		8066FBBA14432FAD00E48AF1 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		8066FBBD14432FAD00E48AF1 /* PukkaAccounts.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PukkaAccounts.xcdatamodel; sourceTree = "<group>"; };
 		80A4972B147C0EB10047263F /* pukka_icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = pukka_icon.icns; sourceTree = "<group>"; };
+		80ADE970152C66E50092DBE8 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		80CA5DDA1476B03C00D55DD2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		80CCF65D14473F6D00F66FA8 /* CDataScanner_Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDataScanner_Extensions.h; sourceTree = "<group>"; };
 		80CCF65E14473F6D00F66FA8 /* CDataScanner_Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDataScanner_Extensions.m; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80ADE971152C66E50092DBE8 /* WebKit.framework in Frameworks */,
 				8066FBA514432FAD00E48AF1 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -107,6 +110,7 @@
 		8066FB9514432FAD00E48AF1 = {
 			isa = PBXGroup;
 			children = (
+				80ADE970152C66E50092DBE8 /* WebKit.framework */,
 				80A4972B147C0EB10047263F /* pukka_icon.icns */,
 				8066FBAA14432FAD00E48AF1 /* PukkaAccounts */,
 				8066FBA314432FAD00E48AF1 /* Frameworks */,
@@ -343,6 +347,7 @@
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_GC = required;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
@@ -361,6 +366,7 @@
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_GC = required;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
