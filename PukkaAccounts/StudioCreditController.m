@@ -12,6 +12,7 @@
 @interface StudioCreditController (internal)
 
 -(void) addStudioCredit:(NSDecimalNumber *)amount forUser:(NSManagedObject*)currentUser;
+-(void) emailDJCADorders;
 
 @end
 
@@ -37,10 +38,65 @@
     [importCredit setValue:currentUser forKey:@"user"];
     
     
-    [importCredit release];   //need to consider memory management....
+    [importCredit release];   //no need with garbage collection is on....
     
 }
 
+
+
+-(void) emailDJCADorders {
+    
+    NSNumberFormatter *_currencyFormatter = [[NSNumberFormatter alloc] init];
+    [_currencyFormatter setNumberStyle:NSNumberFormatterCurrencyStyle];
+    
+    NSArray * selectedUsers = [self searchResultsController].selectedObjects;
+    
+    
+//    NSLog(@"%@",[self messageText].string);
+//    NSLog(@"%lu",selectedUsers.count);
+//    NSLog(@"%@", [[self content] valueForKey:@"creditDescription"]);
+//    NSLog(@"%@", [_currencyFormatter stringFromNumber:[[self content] valueForKey:@"creditAmount"]]);
+//    NSLog(@"%@",[self totalAmountAdded].stringValue);
+
+    
+    
+    
+    
+    NSString * emailMessage = [NSString stringWithFormat:NSLocalizedString(@"%@\n\nINVOICE:\n\n%lu * %@ of %@ = %@",@"Batched Studio Credit email message"),
+                               [self messageText].string,
+                               selectedUsers.count,
+                               [[self content] valueForKey:@"creditDescription"],
+                               [_currencyFormatter stringFromNumber:[[self content] valueForKey:@"creditAmount"]],
+                               [self totalAmountAdded].stringValue];
+    
+    
+   
+
+    
+    [_currencyFormatter release];
+    
+    NSString * emailSubj = NSLocalizedString(@"Studio%20Credit%20Invoice",@"Batched Studio Credit email subject");
+    
+    NSString * encodedEmailMessage = (NSString *)CFURLCreateStringByAddingPercentEscapes(
+                                                                                         NULL,
+                                                                                         (CFStringRef)emailMessage,
+                                                                                         NULL,
+                                                                                         (CFStringRef)@"!*'();:@&=+$,/?%#[]",
+                                                                                         kCFStringEncodingUTF8 );
+    
+    NSString* emailAddr = [NSString stringWithString:@"djcadorders@dundee.ac.uk"];
+    
+    NSString* mailToString = [NSString stringWithFormat:@"mailto:%@?subject=%@&body=%@",emailAddr,emailSubj,encodedEmailMessage];
+    
+ //   NSLog(@"%@",mailToString);
+    
+    
+    
+    NSURL * url = [NSURL URLWithString:mailToString];
+    
+    [[NSWorkspace sharedWorkspace] openURL:url];
+    
+}
 
 @end
 
@@ -52,6 +108,7 @@
 @synthesize modalAddMultipleCredits;
 @synthesize searchResultsController;
 @synthesize totalAmountAdded;
+@synthesize messageText;
 
 - (IBAction)addCreditForSelected:(id)sender {
     
@@ -96,11 +153,21 @@
     }
     
     
+    //TODO - email djcadorders@dundee.ac.uk with the total invoice summary....
+    
+    [self emailDJCADorders];
+    
+    
+    
+    
     [[NSApplication sharedApplication] stopModal];
     
 }
 
 - (IBAction)printInvoice:(id)sender {
+    
+    
+    //TODO - refine frame size to suit - i.e. more users to add -> height of frame is bigger
     
     WebView * printWebView = [[WebView alloc] initWithFrame:NSMakeRect(0.0, 0.0, 800.0, 600.0) frameName:@"pwFrame" groupName:@"pwGroup"];
     
@@ -124,6 +191,7 @@
 
     [[printWebView mainFrame] loadHTMLString:invoiceHTML baseURL:nil];
     
+    
 
     
     /* to load from file...
@@ -141,8 +209,9 @@
     
     //now print it...
     
-    [printWebView print:self];
+//    [printWebView print:self];
     
+    [ [  [printWebView.mainFrame frameView] documentView] print:self];
     
     
     

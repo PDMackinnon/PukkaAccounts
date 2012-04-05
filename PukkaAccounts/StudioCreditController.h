@@ -19,6 +19,7 @@
 
 @property (assign) IBOutlet NSArrayController *searchResultsController;
 @property (assign) IBOutlet NSTextField *totalAmountAdded;
+@property (assign) IBOutlet NSTextView *messageText;
 
 - (IBAction)addCreditForSelected:(id)sender;
 - (IBAction)cancelAddModal:(id)sender;
