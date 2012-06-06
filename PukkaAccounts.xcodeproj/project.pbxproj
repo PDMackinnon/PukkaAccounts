@@ -18,6 +18,7 @@
 		801A1B091444A4C2000A3BF0 /* CurrentTransEntryController.m in Sources */ = {isa = PBXBuildFile; fileRef = 801A1B081444A4C2000A3BF0 /* CurrentTransEntryController.m */; };
 		801A1B0C1444A569000A3BF0 /* SalesController.m in Sources */ = {isa = PBXBuildFile; fileRef = 801A1B0B1444A568000A3BF0 /* SalesController.m */; };
 		8054BC6A1488D680006784AD /* LabelPrintView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8054BC691488D680006784AD /* LabelPrintView.m */; };
+		80647473157F4EF1005021E2 /* ReportsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80647472157F4EF1005021E2 /* ReportsController.m */; };
 		8066FBA514432FAD00E48AF1 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8066FBA414432FAD00E48AF1 /* Cocoa.framework */; };
 		8066FBAF14432FAD00E48AF1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8066FBAD14432FAD00E48AF1 /* InfoPlist.strings */; };
 		8066FBB214432FAD00E48AF1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8066FBB114432FAD00E48AF1 /* main.m */; };
@@ -61,6 +62,8 @@
 		801A1B0B1444A568000A3BF0 /* SalesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SalesController.m; sourceTree = "<group>"; };
 		8054BC681488D680006784AD /* LabelPrintView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LabelPrintView.h; sourceTree = "<group>"; };
 		8054BC691488D680006784AD /* LabelPrintView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LabelPrintView.m; sourceTree = "<group>"; };
+		80647471157F4EF1005021E2 /* ReportsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReportsController.h; sourceTree = "<group>"; };
+		80647472157F4EF1005021E2 /* ReportsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReportsController.m; sourceTree = "<group>"; };
 		8066FBA014432FAD00E48AF1 /* PukkaAccounts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PukkaAccounts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8066FBA414432FAD00E48AF1 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		8066FBA714432FAD00E48AF1 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -180,6 +183,8 @@
 				80038DE915207B420009688B /* StudioCredit.m */,
 				80038DEC15207CB90009688B /* StudioCreditController.h */,
 				80038DED15207CBA0009688B /* StudioCreditController.m */,
+				80647471157F4EF1005021E2 /* ReportsController.h */,
+				80647472157F4EF1005021E2 /* ReportsController.m */,
 			);
 			path = PukkaAccounts;
 			sourceTree = "<group>";
@@ -240,7 +245,7 @@
 		8066FB9714432FAD00E48AF1 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0420;
+				LastUpgradeCheck = 0430;
 			};
 			buildConfigurationList = 8066FB9A14432FAD00E48AF1 /* Build configuration list for PBXProject "PukkaAccounts" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -301,6 +306,7 @@
 				8054BC6A1488D680006784AD /* LabelPrintView.m in Sources */,
 				80038DEA15207B420009688B /* StudioCredit.m in Sources */,
 				80038DEE15207CBA0009688B /* StudioCreditController.m in Sources */,
+				80647473157F4EF1005021E2 /* ReportsController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

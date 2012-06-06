@@ -36,7 +36,7 @@
     [importCredit setValue:currentUser forKey:@"user"];
     
     
-    [importCredit release];   //need to consider mamory management....
+    [importCredit release];   //need to consider memory management.... garbage collection i.e. this is redundant
     
 }
 
