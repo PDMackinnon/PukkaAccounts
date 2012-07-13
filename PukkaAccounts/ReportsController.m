@@ -10,6 +10,35 @@
 
 @implementation ReportsController
 
+
+- (id)init
+{
+    self = [super init];
+    if (self) {
+        // Initialization code here.
+    }
+    
+    return self;
+}
+
+
+-(void)awakeFromNib {
+    
+    [super awakeFromNib];
+    
+    [self setFilterPredicate:[NSPredicate predicateWithFormat:@"user.enabledUser == YES"]];
+    
+  // [self setFilterPredicate:nil];
+
+    
+    //   NSLog(@"%@",[self filterPredicate]);
+   // NSLog(@"%d",[self automaticallyPreparesContent]);
+}
+ 
+ 
+
+
+
 - (IBAction)exportReportJSON:(id)sender {
 
   //  NSLog(@"export ARRAY...\n%@",[self selectedObjects] );

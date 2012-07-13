@@ -16,6 +16,8 @@
 
 
 @property (assign) IBOutlet NSWindow *modalAddMultipleCredits;
+@property (assign) IBOutlet NSWindow *modalDisableUsers;
+@property (assign) IBOutlet NSWindow *modalEnableUsers;
 
 @property (assign) IBOutlet NSArrayController *searchResultsController;
 @property (assign) IBOutlet NSTextField *totalAmountAdded;
@@ -25,5 +27,14 @@
 - (IBAction)cancelAddModal:(id)sender;
 - (IBAction)confirmAddCredits:(id)sender;
 - (IBAction)printInvoice:(id)sender;
+
+
+- (IBAction)enableSelectedUsers:(id)sender;
+- (IBAction)disableSelectedUsers:(id)sender;
+
+- (IBAction)confirmDisableUsers:(id)sender;
+- (IBAction)confirmEnableUsers:(id)sender;
+
+
 
 @end

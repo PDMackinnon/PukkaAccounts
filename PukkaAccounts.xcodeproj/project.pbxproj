@@ -17,6 +17,8 @@
 		801A1B0514449C5E000A3BF0 /* CurrentTransEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 801A1B0414449C5E000A3BF0 /* CurrentTransEntry.m */; };
 		801A1B091444A4C2000A3BF0 /* CurrentTransEntryController.m in Sources */ = {isa = PBXBuildFile; fileRef = 801A1B081444A4C2000A3BF0 /* CurrentTransEntryController.m */; };
 		801A1B0C1444A569000A3BF0 /* SalesController.m in Sources */ = {isa = PBXBuildFile; fileRef = 801A1B0B1444A568000A3BF0 /* SalesController.m */; };
+		801A5F2E15B0818A00422B4B /* studioManagerSearchObjectController.m in Sources */ = {isa = PBXBuildFile; fileRef = 801A5F2D15B0818A00422B4B /* studioManagerSearchObjectController.m */; };
+		801A5F3115B081E100422B4B /* StudioManagerSearchObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 801A5F3015B081E100422B4B /* StudioManagerSearchObject.m */; };
 		8054BC6A1488D680006784AD /* LabelPrintView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8054BC691488D680006784AD /* LabelPrintView.m */; };
 		80647473157F4EF1005021E2 /* ReportsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80647472157F4EF1005021E2 /* ReportsController.m */; };
 		8066FBA514432FAD00E48AF1 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8066FBA414432FAD00E48AF1 /* Cocoa.framework */; };
@@ -61,6 +63,10 @@
 		801A1B0A1444A568000A3BF0 /* SalesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SalesController.h; sourceTree = "<group>"; };
 		801A1B0B1444A568000A3BF0 /* SalesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SalesController.m; sourceTree = "<group>"; };
 		801A5F2A15B03A1A00422B4B /* PukkaAccounts01.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PukkaAccounts01.xcdatamodel; sourceTree = "<group>"; };
+		801A5F2C15B0818A00422B4B /* studioManagerSearchObjectController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = studioManagerSearchObjectController.h; sourceTree = "<group>"; };
+		801A5F2D15B0818A00422B4B /* studioManagerSearchObjectController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = studioManagerSearchObjectController.m; sourceTree = "<group>"; };
+		801A5F2F15B081E100422B4B /* StudioManagerSearchObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StudioManagerSearchObject.h; sourceTree = "<group>"; };
+		801A5F3015B081E100422B4B /* StudioManagerSearchObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StudioManagerSearchObject.m; sourceTree = "<group>"; };
 		8054BC681488D680006784AD /* LabelPrintView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LabelPrintView.h; sourceTree = "<group>"; };
 		8054BC691488D680006784AD /* LabelPrintView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LabelPrintView.m; sourceTree = "<group>"; };
 		80647471157F4EF1005021E2 /* ReportsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReportsController.h; sourceTree = "<group>"; };
@@ -186,6 +192,10 @@
 				80038DED15207CBA0009688B /* StudioCreditController.m */,
 				80647471157F4EF1005021E2 /* ReportsController.h */,
 				80647472157F4EF1005021E2 /* ReportsController.m */,
+				801A5F2C15B0818A00422B4B /* studioManagerSearchObjectController.h */,
+				801A5F2D15B0818A00422B4B /* studioManagerSearchObjectController.m */,
+				801A5F2F15B081E100422B4B /* StudioManagerSearchObject.h */,
+				801A5F3015B081E100422B4B /* StudioManagerSearchObject.m */,
 			);
 			path = PukkaAccounts;
 			sourceTree = "<group>";
@@ -308,6 +318,8 @@
 				80038DEA15207B420009688B /* StudioCredit.m in Sources */,
 				80038DEE15207CBA0009688B /* StudioCreditController.m in Sources */,
 				80647473157F4EF1005021E2 /* ReportsController.m in Sources */,
+				801A5F2E15B0818A00422B4B /* studioManagerSearchObjectController.m in Sources */,
+				801A5F3115B081E100422B4B /* StudioManagerSearchObject.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -106,6 +106,8 @@
 
 @implementation StudioCreditController
 @synthesize modalAddMultipleCredits;
+@synthesize modalDisableUsers;
+@synthesize modalEnableUsers;
 @synthesize searchResultsController;
 @synthesize totalAmountAdded;
 @synthesize messageText;
@@ -215,6 +217,37 @@
     
     
     
+}
+
+- (IBAction)enableSelectedUsers:(id)sender {
+    
+    
+    NSArray * selectedUsers = [self searchResultsController].selectedObjects;
+
+    long result = [[NSApplication sharedApplication] runModalForWindow: modalEnableUsers];
+    
+    [modalEnableUsers close];
+
+    
+    
+}
+
+- (IBAction)disableSelectedUsers:(id)sender {
+    
+    
+    NSArray * selectedUsers = [self searchResultsController].selectedObjects;
+
+    long result = [[NSApplication sharedApplication] runModalForWindow: modalDisableUsers];
+    
+    [modalDisableUsers close];
+    
+    
+}
+
+- (IBAction)confirmDisableUsers:(id)sender {
+}
+
+- (IBAction)confirmEnableUsers:(id)sender {
 }
 
 
