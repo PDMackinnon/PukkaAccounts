@@ -92,7 +92,17 @@ NSString * const DataManagerDidSaveFailedNotification = @"DataManagerDidSaveFail
     
     NSURL *url = [applicationFilesDirectory URLByAppendingPathComponent:@"PukkaAccounts.storedata"];
     __persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:mom];
-    if (![__persistentStoreCoordinator addPersistentStoreWithType:NSXMLStoreType configuration:nil URL:url options:nil error:&error]) {
+    
+    
+    NSDictionary *optionsDictionary = [NSDictionary dictionaryWithObjectsAndKeys:
+                                       [NSNumber numberWithBool:YES],
+                                                        NSMigratePersistentStoresAutomaticallyOption,
+                                       [NSNumber numberWithBool:YES],
+                                                        NSInferMappingModelAutomaticallyOption
+                                       , nil];
+    
+    
+    if (![__persistentStoreCoordinator addPersistentStoreWithType:NSXMLStoreType configuration:nil URL:url options:optionsDictionary error:&error]) {
         [[NSApplication sharedApplication] presentError:error];
         [__persistentStoreCoordinator release], __persistentStoreCoordinator = nil;
         return nil;

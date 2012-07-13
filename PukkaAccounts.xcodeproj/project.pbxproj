@@ -60,6 +60,7 @@
 		801A1B081444A4C2000A3BF0 /* CurrentTransEntryController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CurrentTransEntryController.m; sourceTree = "<group>"; };
 		801A1B0A1444A568000A3BF0 /* SalesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SalesController.h; sourceTree = "<group>"; };
 		801A1B0B1444A568000A3BF0 /* SalesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SalesController.m; sourceTree = "<group>"; };
+		801A5F2A15B03A1A00422B4B /* PukkaAccounts01.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PukkaAccounts01.xcdatamodel; sourceTree = "<group>"; };
 		8054BC681488D680006784AD /* LabelPrintView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LabelPrintView.h; sourceTree = "<group>"; };
 		8054BC691488D680006784AD /* LabelPrintView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LabelPrintView.m; sourceTree = "<group>"; };
 		80647471157F4EF1005021E2 /* ReportsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReportsController.h; sourceTree = "<group>"; };
@@ -440,6 +441,7 @@
 		8066FBBC14432FAD00E48AF1 /* PukkaAccounts.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				801A5F2A15B03A1A00422B4B /* PukkaAccounts01.xcdatamodel */,
 				8066FBBD14432FAD00E48AF1 /* PukkaAccounts.xcdatamodel */,
 			);
 			currentVersion = 8066FBBD14432FAD00E48AF1 /* PukkaAccounts.xcdatamodel */;
