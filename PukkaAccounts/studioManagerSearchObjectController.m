@@ -10,4 +10,19 @@
 
 @implementation studioManagerSearchObjectController
 
+
+
+
+-(void)awakeFromNib {
+
+    
+    [super awakeFromNib];
+
+    
+    
+    
+}
+
+
+
 @end

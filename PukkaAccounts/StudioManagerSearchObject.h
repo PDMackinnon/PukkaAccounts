@@ -10,4 +10,12 @@
 
 @interface StudioManagerSearchObject : NSObject
 
+
+
+
+@property (nonatomic, retain) NSString * courseSearch;
+@property (nonatomic, retain) NSNumber * showEnabled;
+@property (nonatomic, retain) NSNumber * showDisabled;
+
+
 @end

@@ -10,4 +10,10 @@
 
 @implementation StudioManagerSearchObject
 
+
+@synthesize courseSearch;
+@synthesize showEnabled;
+@synthesize showDisabled;
+
+
 @end

@@ -245,9 +245,29 @@
 }
 
 - (IBAction)confirmDisableUsers:(id)sender {
-}
+    
+    for (id userToDisable in [self searchResultsController].selectedObjects) {
+        
+        [userToDisable setValue:[NSNumber numberWithBool:NO] forKey:@"enabledUser"];
+        
+    }//end for loop
+
+    
+    
+    [[NSApplication sharedApplication] stopModal];
+    
+}//end confirm Disabled Users method
 
 - (IBAction)confirmEnableUsers:(id)sender {
+    for (id userToEnable in [self searchResultsController].selectedObjects) {
+        
+        [userToEnable setValue:[NSNumber numberWithBool:YES] forKey:@"enabledUser"];
+        
+    }//end for loop
+    
+    
+    
+    [[NSApplication sharedApplication] stopModal];
 }
 
 

@@ -12,7 +12,6 @@
 		800D3DBA144338DA00FC53AF /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 800D3DB9144338DA00FC53AF /* DataManager.m */; };
 		800D3DBE144354B600FC53AF /* TodayDatePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 800D3DBD144354B600FC53AF /* TodayDatePicker.m */; };
 		800D3DC11443550800FC53AF /* Transaction.m in Sources */ = {isa = PBXBuildFile; fileRef = 800D3DC01443550800FC53AF /* Transaction.m */; };
-		800D3DC41443552D00FC53AF /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 800D3DC31443552D00FC53AF /* User.m */; };
 		800D3DC7144355FA00FC53AF /* TransController.m in Sources */ = {isa = PBXBuildFile; fileRef = 800D3DC6144355F900FC53AF /* TransController.m */; };
 		801A1B0514449C5E000A3BF0 /* CurrentTransEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 801A1B0414449C5E000A3BF0 /* CurrentTransEntry.m */; };
 		801A1B091444A4C2000A3BF0 /* CurrentTransEntryController.m in Sources */ = {isa = PBXBuildFile; fileRef = 801A1B081444A4C2000A3BF0 /* CurrentTransEntryController.m */; };
@@ -39,6 +38,7 @@
 		80D8E73914596E6D00702575 /* greenbuttonlarge.png in Resources */ = {isa = PBXBuildFile; fileRef = 80D8E73814596E6D00702575 /* greenbuttonlarge.png */; };
 		80E281B21459C25300930C9F /* CurrentSaleState.m in Sources */ = {isa = PBXBuildFile; fileRef = 80E281B11459C25300930C9F /* CurrentSaleState.m */; };
 		80F3B0DD14596B5100DE8A29 /* redButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 80F3B0DC14596B5100DE8A29 /* redButton.png */; };
+		80FB648815B5AF2900254B55 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 80FB648715B5AF2900254B55 /* User.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,8 +52,6 @@
 		800D3DBD144354B600FC53AF /* TodayDatePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TodayDatePicker.m; sourceTree = "<group>"; };
 		800D3DBF1443550800FC53AF /* Transaction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Transaction.h; sourceTree = "<group>"; };
 		800D3DC01443550800FC53AF /* Transaction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Transaction.m; sourceTree = "<group>"; };
-		800D3DC21443552D00FC53AF /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
-		800D3DC31443552D00FC53AF /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		800D3DC5144355F900FC53AF /* TransController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransController.h; sourceTree = "<group>"; };
 		800D3DC6144355F900FC53AF /* TransController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransController.m; sourceTree = "<group>"; };
 		801A1B0314449C5E000A3BF0 /* CurrentTransEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurrentTransEntry.h; sourceTree = "<group>"; };
@@ -102,6 +100,8 @@
 		80E281B01459C25300930C9F /* CurrentSaleState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurrentSaleState.h; sourceTree = "<group>"; };
 		80E281B11459C25300930C9F /* CurrentSaleState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CurrentSaleState.m; sourceTree = "<group>"; };
 		80F3B0DC14596B5100DE8A29 /* redButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = redButton.png; sourceTree = "<group>"; };
+		80FB648615B5AF2900254B55 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		80FB648715B5AF2900254B55 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,9 +168,9 @@
 				8066FBB614432FAD00E48AF1 /* PukkaAccountsAppDelegate.h */,
 				8066FBB714432FAD00E48AF1 /* PukkaAccountsAppDelegate.m */,
 				8066FBB914432FAD00E48AF1 /* MainMenu.xib */,
+				80FB648615B5AF2900254B55 /* User.h */,
+				80FB648715B5AF2900254B55 /* User.m */,
 				8066FBBC14432FAD00E48AF1 /* PukkaAccounts.xcdatamodeld */,
-				800D3DC21443552D00FC53AF /* User.h */,
-				800D3DC31443552D00FC53AF /* User.m */,
 				800D3DBF1443550800FC53AF /* Transaction.h */,
 				800D3DC01443550800FC53AF /* Transaction.m */,
 				801A1B0314449C5E000A3BF0 /* CurrentTransEntry.h */,
@@ -303,7 +303,6 @@
 				800D3DBA144338DA00FC53AF /* DataManager.m in Sources */,
 				800D3DBE144354B600FC53AF /* TodayDatePicker.m in Sources */,
 				800D3DC11443550800FC53AF /* Transaction.m in Sources */,
-				800D3DC41443552D00FC53AF /* User.m in Sources */,
 				800D3DC7144355FA00FC53AF /* TransController.m in Sources */,
 				801A1B0514449C5E000A3BF0 /* CurrentTransEntry.m in Sources */,
 				801A1B091444A4C2000A3BF0 /* CurrentTransEntryController.m in Sources */,
@@ -320,6 +319,7 @@
 				80647473157F4EF1005021E2 /* ReportsController.m in Sources */,
 				801A5F2E15B0818A00422B4B /* studioManagerSearchObjectController.m in Sources */,
 				801A5F3115B081E100422B4B /* StudioManagerSearchObject.m in Sources */,
+				80FB648815B5AF2900254B55 /* User.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
