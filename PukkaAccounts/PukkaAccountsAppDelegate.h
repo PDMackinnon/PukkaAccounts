@@ -83,5 +83,6 @@
 - (IBAction)activateManageUsersWin:(id)sender;
 - (IBAction)importJSON:(id)sender;
 - (IBAction)importWithCredit:(id)sender;
+- (IBAction)updateJSON:(id)sender;
 
 @end

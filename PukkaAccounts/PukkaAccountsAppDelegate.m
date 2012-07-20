@@ -253,6 +253,120 @@
 }
 
 
+- (IBAction)updateJSON:(id)sender {
+    //open a file dialog, and import CVS plain text for parsing
+    
+    
+    int result;
+    NSArray *fileTypes = [NSArray arrayWithObject:@"json"];
+    NSOpenPanel *openJSONpanel = [NSOpenPanel openPanel];
+    result = [openJSONpanel runModalForDirectory:NSHomeDirectory()
+                                            file:nil types:fileTypes];
+    
+    if (result == NSOKButton) {
+        NSArray *filesToOpen = [openJSONpanel filenames];
+        
+        NSString *theFile = [filesToOpen objectAtIndex:0];
+        
+        
+        NSLog(@"the file is: %@",theFile);
+        // NSError * error = [[NSError alloc] init];
+        NSError *error = NULL;
+        
+        NSString *theFileString = [NSString stringWithContentsOfFile:theFile encoding:NSUTF8StringEncoding error:&error];
+        if (nil == theFileString) return;
+        //    NSScanner *scanner = [NSScanner scannerWithString:theFileString];
+        
+        NSData *jsonData = [theFileString dataUsingEncoding:NSUTF8StringEncoding];
+        
+        NSDictionary *importDict = [[CJSONDeserializer deserializer] deserializeAsDictionary:jsonData error:&error];
+   
+        NSArray *usersImport = [importDict objectForKey:@"users"];
+        
+        NSArray *matricsToUpdate = [usersImport valueForKey:@"matric"];
+        
+     //   NSLog(@"matrics to update: %@",matricsToUpdate);
+        
+        NSPredicate *matricPredicate = [NSPredicate predicateWithFormat:@"matricNumber IN %@",matricsToUpdate];
+        
+        //fetch these matrics....
+         NSManagedObjectContext * moc = [[DataManager sharedInstance] managedObjectContext];
+        NSEntityDescription *userEntity = [NSEntityDescription entityForName:@"User" inManagedObjectContext:moc];
+        NSFetchRequest *fetchUsersToUpdateReq = [[NSFetchRequest alloc] init];
+        [fetchUsersToUpdateReq setEntity:userEntity];
+        [fetchUsersToUpdateReq setPredicate:matricPredicate];
+        
+        NSArray *usersToUpdate = [moc executeFetchRequest:fetchUsersToUpdateReq error:nil];
+        
+        
+       // NSUInteger userIndex;
+        
+        NSArray *existingMatrics = [usersToUpdate valueForKey:@"matricNumber"]; //array of matric as strings
+        
+        NSDictionary *lookupExisting = [NSDictionary dictionaryWithObjects:usersToUpdate forKeys:existingMatrics];
+        
+        for (NSDictionary *userDict in usersImport) {
+            NSString *matricText = [userDict objectForKey:@"matric"];
+            NSString *userNameText = [userDict objectForKey:@"userName"];
+            NSString *fullNameText = [userDict objectForKey:@"fullName"];
+            NSString *emailText = [userDict objectForKey:@"email"];
+            NSString *courseText = [userDict objectForKey:@"course"];
+            NSString *yearInt = [userDict objectForKey:@"year"];
+            
+            
+            if ([existingMatrics containsObject:matricText]) { // found a match in existing data...so update rather than new
+             //   NSLog(@"matches %@",matricText);
+                
+             //   NSLog(@"so update this object:%@",[lookupExisting objectForKey:matricText]);
+                
+                NSManagedObject *updateUser = [lookupExisting objectForKey:matricText];
+                
+                
+                //commented out attributes that are unlikely to change...
+                
+              //  [updateUser setValue:userNameText forKey:@"UserName"];
+              //  [updateUser setValue:fullNameText forKey:@"FullName"];
+              //  [updateUser setValue:emailText forKey:@"EmailAddress"];
+                
+                //these below may change year to year....
+                
+                [updateUser setValue:courseText forKey:@"subjectOfStudy"];     
+                
+                NSNumber *yrofStudy = [NSNumber numberWithInteger:[yearInt integerValue]];  
+                
+                [updateUser setValue:yrofStudy forKey:@"CurrentYearofStudy"];
+
+                //also re-enable user
+                [updateUser setValue:[NSNumber numberWithBool:YES] forKey:@"enabledUser"];
+                
+                
+            }
+            
+            else { //otherwise new entry...
+                
+                NSManagedObject *newUser = [NSEntityDescription insertNewObjectForEntityForName:@"User" inManagedObjectContext:[[DataManager sharedInstance] managedObjectContext]];
+                
+                [newUser setValue:matricText forKey:@"MatricNumber"];
+                [newUser setValue:userNameText forKey:@"UserName"];
+                [newUser setValue:fullNameText forKey:@"FullName"];
+                [newUser setValue:emailText forKey:@"EmailAddress"];
+                [newUser setValue:courseText forKey:@"subjectOfStudy"];     
+                
+                NSNumber *yrofStudy = [NSNumber numberWithInteger:[yearInt integerValue]];  
+                
+                [newUser setValue:yrofStudy forKey:@"CurrentYearofStudy"];
+                
+                [newUser setValue:[NSNumber numberWithBool:YES] forKey:@"enabledUser"];
+
+            }//end if..else..
+
+            
+        }//end for
+    }//end if OK button from NSopenPanel 
+}//end import
+
+
+
 
 - (IBAction)importJSON:(id)sender {
     //open a file dialog, and import CVS plain text for parsing
@@ -315,7 +429,9 @@
     int result;
     NSArray *fileTypes = [NSArray arrayWithObject:@"json"];
     NSOpenPanel *openJSONpanel = [NSOpenPanel openPanel];
+    if ([sender tag]==1) { //with credits button
     [openJSONpanel setAccessoryView:studioCreditView];
+    }//end if
     
     result = [openJSONpanel runModalForDirectory:NSHomeDirectory()
                                             file:nil types:fileTypes];
@@ -362,11 +478,10 @@
             
             [newUser setValue:yrofStudy forKey:@"CurrentYearofStudy"];
             
-            if ([studioCreditCheckBox state] == NSOnState) {
-                
+            if (([studioCreditCheckBox state] == NSOnState) && ([sender tag]==1))    //with credits button and check box checked
+                {
                 [self addStudioCredit:[studioCreditAmount floatValue] forUser:newUser];
-
-            }
+                }
             
             
             
