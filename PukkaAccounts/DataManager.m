@@ -93,6 +93,7 @@ NSString * const DataManagerDidSaveFailedNotification = @"DataManagerDidSaveFail
     NSURL *url = [applicationFilesDirectory URLByAppendingPathComponent:@"PukkaAccounts.storedata"];
     __persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:mom];
     
+   // NSLog(@"data store = %@",url);
     
     NSDictionary *optionsDictionary = [NSDictionary dictionaryWithObjectsAndKeys:
                                        [NSNumber numberWithBool:YES],

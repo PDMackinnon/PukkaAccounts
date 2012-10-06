@@ -48,6 +48,7 @@
 
 @synthesize manageUsersWindow;
 @synthesize studioCreditManagerWindow;
+@synthesize reportsWindow;
 @synthesize creditDate;
 @synthesize creditDescr;
 @synthesize creditAmount;
@@ -78,6 +79,8 @@
     [window setExcludedFromWindowsMenu:YES];
     [manageUsersWindow setExcludedFromWindowsMenu:YES];
     [studioCreditManagerWindow setExcludedFromWindowsMenu:YES];
+    [reportsWindow setExcludedFromWindowsMenu:YES];
+    
 }
 
 

@@ -46,6 +46,7 @@
 @property (readonly) DataManager *dataManager;
 @property (assign) IBOutlet NSWindow *manageUsersWindow;
 @property (assign) IBOutlet NSWindow *studioCreditManagerWindow;
+@property (assign) IBOutlet NSWindow *reportsWindow;
 
 
 @property (nonatomic,retain) Transaction *pendingCredit;
