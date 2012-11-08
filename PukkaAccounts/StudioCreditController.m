@@ -219,6 +219,86 @@
     
 }
 
+- (IBAction)emailUsersToCredit:(id)sender {
+    
+    
+    
+    NSMutableString* emailAddr = [NSMutableString stringWithString:@"djcadprint@dundee.ac.uk"];
+    
+    
+    for (id userToCredit in [self searchResultsController].selectedObjects) {
+        
+        [emailAddr appendFormat:@",%@",[userToCredit valueForKey:@"emailAddress"]];
+        
+    }
+
+//    NSLog(@"address = %@",emailAddr);
+    
+    
+    
+    NSNumberFormatter *_currencyFormatter = [[NSNumberFormatter alloc] init];
+    [_currencyFormatter setNumberStyle:NSNumberFormatterCurrencyStyle];
+    
+    NSArray * selectedUsers = [self searchResultsController].selectedObjects;
+    
+    NSString * emailMessage = [NSString stringWithFormat:@"%@\n\n%@\t\t%@\n\n",
+                               [self messageText].string,
+                               [[self content] valueForKey:@"creditDescription"],
+                               [_currencyFormatter stringFromNumber:[[self content] valueForKey:@"creditAmount"]]
+                                ];
+    
+//    NSLog(@"message = %@",emailMessage);
+    
+    
+    [_currencyFormatter release];
+    
+  //  NSString * emailSubj = NSLocalizedString(@"",@"");     TODO !!
+    
+    NSString * emailSubj = @"Print DJCAD Studio Credits";
+    
+    
+    NSString * encodedEmailSubj = (NSString *)CFURLCreateStringByAddingPercentEscapes(
+                                                                                         NULL,
+                                                                                         (CFStringRef)emailSubj,
+                                                                                         NULL,
+                                                                                         (CFStringRef)@"!*'();:@&=+$,/?%#[]",
+                                                                                         kCFStringEncodingUTF8 );
+    
+    
+    NSString * encodedEmailMessage = (NSString *)CFURLCreateStringByAddingPercentEscapes(
+                                                                                         NULL,
+                                                                                         (CFStringRef)emailMessage,
+                                                                                         NULL,
+                                                                                         (CFStringRef)@"!*'();:@&=+$,/?%#[]",
+                                                                                         kCFStringEncodingUTF8 );
+      
+    
+    
+    NSString* mailToString = [NSString stringWithFormat:@"mailto:%@?subject=%@&body=%@",emailAddr,encodedEmailSubj,encodedEmailMessage];
+    
+//       NSLog(@"composed email string = %@",mailToString);
+    
+    
+    
+    NSURL * url = [NSURL URLWithString:mailToString];
+    
+
+    
+    [[NSWorkspace sharedWorkspace] openURL:url];
+    
+    
+
+    
+    
+    
+    
+}
+
+
+
+
+
+
 - (IBAction)enableSelectedUsers:(id)sender {
     
     

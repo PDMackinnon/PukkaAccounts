@@ -27,6 +27,7 @@
 - (IBAction)cancelAddModal:(id)sender;
 - (IBAction)confirmAddCredits:(id)sender;
 - (IBAction)printInvoice:(id)sender;
+- (IBAction)emailUsersToCredit:(id)sender;
 
 
 - (IBAction)enableSelectedUsers:(id)sender;
