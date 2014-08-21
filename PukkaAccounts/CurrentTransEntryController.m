@@ -125,12 +125,12 @@
     
 
     NSString * emailSubj = NSLocalizedString(@"Printing completed. Please Collect.", @"email subject field for printing completed message");
-    NSString * encodedEmailSubj = (NSString *)CFURLCreateStringByAddingPercentEscapes(
+    NSString * encodedEmailSubj = (NSString *)CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(
                                                                                       NULL,
                                                                                       (CFStringRef)emailSubj,
                                                                                       NULL,
                                                                                       (CFStringRef)@"!*'();:@&=+$,/?%#[]",
-                                                                                      kCFStringEncodingUTF8 );
+                                                                                      kCFStringEncodingUTF8 ));
     
     NSMutableString * emailMessage = [NSMutableString stringWithFormat:NSLocalizedString(@"DJCAD Print Sales from your account:\n\n",@"email message heading for completed prints, processed sale")];
         
@@ -156,7 +156,7 @@
     [posArrayController willChangeValueForKey:@"arrangedObjects"];
     
     for (id saleObject in pendingSales) {
-        NSLog(@"pending = %@, amount = %@, person = %@",[saleObject pending], [saleObject creditAmount], [[saleObject user] fullName]);    
+        // NSLog(@"pending = %@, amount = %@, person = %@",[saleObject pending], [saleObject creditAmount], [[saleObject user] fullName]);
         
         //last step - pending = NO
         //    [saleObject setPending:[NSNumber numberWithBool:NO]];
@@ -186,12 +186,12 @@
     
     [emailMessage appendFormat:NSLocalizedString(@"\n\n\nNew balance Total is:\t %@",@"email message footer for completed prints, processed sale"),[_currencyFormatter stringFromNumber:[transactionsController valueForKeyPath:@"arrangedObjects.@sum.creditAmount"]]];
     
-    NSString * encodedEmailMessage = (NSString *)CFURLCreateStringByAddingPercentEscapes(
+    NSString * encodedEmailMessage = (NSString *)CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(
                                                                                          NULL,
                                                                                          (CFStringRef)emailMessage,
                                                                                          NULL,
                                                                                          (CFStringRef)@"!*'();:@&=+$,/?%#[]",
-                                                                                         kCFStringEncodingUTF8 );
+                                                                                         kCFStringEncodingUTF8 ));
     
     
     NSString* mailToString = [NSString stringWithFormat:@"mailto:%@?subject=%@&body=%@",emailAddr,encodedEmailSubj,encodedEmailMessage];
@@ -200,8 +200,7 @@
     
     [[NSWorkspace sharedWorkspace] openURL:url];
     
-    [_currencyFormatter release];  //end of email section..
-    [_dateFormatter release];
+      //end of email section..
     
     
     
@@ -240,12 +239,12 @@
     
     
     NSString * emailSubj = NSLocalizedString(@"Printing on hold. Please supply account credit",@"email subject field for insufficient credit message, unprocessed sale");
-    NSString * encodedEmailSubj = (NSString *)CFURLCreateStringByAddingPercentEscapes(
+    NSString * encodedEmailSubj = (NSString *)CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(
                                                                                       NULL,
                                                                                       (CFStringRef)emailSubj,
                                                                                       NULL,
                                                                                       (CFStringRef)@"!*'();:@&=+$,/?%#[]",
-                                                                                      kCFStringEncodingUTF8 );
+                                                                                      kCFStringEncodingUTF8 ));
     
     NSMutableString * emailMessage = [NSMutableString stringWithFormat:NSLocalizedString(@"Pending items that exceed the available balance:\n\n",@"email message for insuficcient credit heading, unprocessed items")];
     
@@ -270,12 +269,12 @@
     
     [emailMessage appendFormat:NSLocalizedString(@"\n\n\nCurrent balance available is:\t %@",@"email message footer for unprocessed sale indicating balance available"),[_currencyFormatter stringFromNumber:[transactionsController valueForKeyPath:@"arrangedObjects.@sum.creditAmount"]]];
     
-    NSString * encodedEmailMessage = (NSString *)CFURLCreateStringByAddingPercentEscapes(
+    NSString * encodedEmailMessage = (NSString *)CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(
                                                                                          NULL,
                                                                                          (CFStringRef)emailMessage,
                                                                                          NULL,
                                                                                          (CFStringRef)@"!*'();:@&=+$,/?%#[]",
-                                                                                         kCFStringEncodingUTF8 );
+                                                                                         kCFStringEncodingUTF8 ));
     
     
     NSString* mailToString = [NSString stringWithFormat:@"mailto:%@?subject=%@&body=%@",emailAddr,encodedEmailSubj,encodedEmailMessage];
@@ -284,8 +283,7 @@
     
     [[NSWorkspace sharedWorkspace] openURL:url];
     
-    [_currencyFormatter release];  //end of email section..
-    [_dateFormatter release];
+      //end of email section..
     
     
     //clear inputs
@@ -305,16 +303,11 @@
     
     [labelPrintView print:self];
     
-    [labelPrintView release];
 }
 
 
 
 
-- (void)dealloc
-{
-    [super dealloc];
-}
 
 
 @end

@@ -69,10 +69,6 @@ NSDecimalNumber* negate(NSDecimalNumber *aDecimal) {
     return self;
 }
 
-- (void)dealloc
-{
-    [super dealloc];
-}
 
 @end
 

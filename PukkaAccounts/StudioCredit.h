@@ -9,11 +9,11 @@
 #import <Foundation/Foundation.h>
 
 @interface StudioCredit : NSObject
-@property (assign) IBOutlet NSTextField *descriptionTextField;
-@property (assign) IBOutlet NSTextField *amountTextField;
+@property (strong) IBOutlet NSTextField *descriptionTextField;
+@property (strong) IBOutlet NSTextField *amountTextField;
 
-@property (nonatomic, retain) NSString * creditDescription;
-@property (nonatomic, retain) NSDecimalNumber * creditAmount;
+@property (nonatomic, strong) NSString * creditDescription;
+@property (nonatomic, strong) NSDecimalNumber * creditAmount;
 
 
 @end

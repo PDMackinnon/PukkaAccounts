@@ -105,7 +105,7 @@ NSString * const DataManagerDidSaveFailedNotification = @"DataManagerDidSaveFail
     
     if (![__persistentStoreCoordinator addPersistentStoreWithType:NSXMLStoreType configuration:nil URL:url options:optionsDictionary error:&error]) {
         [[NSApplication sharedApplication] presentError:error];
-        [__persistentStoreCoordinator release], __persistentStoreCoordinator = nil;
+        __persistentStoreCoordinator = nil;
         return nil;
     }
     
@@ -188,10 +188,6 @@ NSString * const DataManagerDidSaveFailedNotification = @"DataManagerDidSaveFail
 {
     [self save];
     
-    [__managedObjectContext release];
-    [__persistentStoreCoordinator release];
-    [__managedObjectModel release];
-    [super dealloc];
 }
 
 

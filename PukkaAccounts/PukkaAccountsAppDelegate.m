@@ -36,7 +36,6 @@
     [importCredit setValue:currentUser forKey:@"user"];
     
     
-    [importCredit release];   //need to consider memory management.... garbage collection i.e. this is redundant
     
 }
 
@@ -177,18 +176,20 @@
     [_currencyFormatter setNumberStyle:NSNumberFormatterCurrencyStyle];
     
     NSString * emailMessage = [NSString stringWithFormat:NSLocalizedString(@"DJCAD Print Credit added to your account: %@",@"email message for print credit added"), [_currencyFormatter stringFromNumber:[pendingCredit creditAmount]]];
-    [_currencyFormatter release];
     
     NSString * emailSubj = NSLocalizedString(@"Print%20Credit%20added",@"email subject for print credit added");
     
-    NSString * encodedEmailMessage = (NSString *)CFURLCreateStringByAddingPercentEscapes(
+    NSString * encodedEmailMessage = (NSString *)CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(
                                                                                          NULL,
                                                                                          (CFStringRef)emailMessage,
                                                                                          NULL,
                                                                                          (CFStringRef)@"!*'();:@&=+$,/?%#[]",
-                                                                                         kCFStringEncodingUTF8 );
+                                                                                         kCFStringEncodingUTF8 ));
     
-    NSString* emailAddr = [[[userSearch selectedObjects] objectAtIndex:0] emailAddress];
+//    NSString* emailAddr = [[[userSearch selectedObjects] objectAtIndex:0] emailAddress];
+    
+    NSString* emailAddr = [[[userSearch selectedObjects] objectAtIndex:0] objectForKey:@"emailAddress"];
+
     
     NSString* mailToString = [NSString stringWithFormat:@"mailto:%@?subject=%@&body=%@",emailAddr,emailSubj,encodedEmailMessage];
     
@@ -205,7 +206,7 @@
     
 // clear current pending from display and from memory    
     
-    [pendingCredit release]; //clear and release current pending credit object
+     //clear and release current pending credit object
     pendingCredit = nil;
     
     //display cleared
@@ -536,7 +537,6 @@
         [alert addButtonWithTitle:cancelButton];
         
         NSInteger answer = [alert runModal];
-        [alert release];
         alert = nil;
         
         if (answer == NSAlertAlternateReturn) {
@@ -551,9 +551,5 @@
 
 
 
-- (void)dealloc
-{
-    [super dealloc];
-}
 
 @end

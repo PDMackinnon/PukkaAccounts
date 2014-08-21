@@ -14,12 +14,12 @@
 @interface Transaction : NSManagedObject {
 @private
 }
-@property (nonatomic, retain) NSString * transDescription;
-@property (nonatomic, retain) NSDecimalNumber * creditAmount;
-@property (nonatomic, retain) NSNumber * pending;
-@property (nonatomic, retain) NSDecimalNumber * itemCost;
-@property (nonatomic, retain) NSNumber * saleQuantity;
-@property (nonatomic, retain) NSDate * date;
-@property (nonatomic, retain) User * user;
+@property (nonatomic, strong) NSString * transDescription;
+@property (nonatomic, strong) NSDecimalNumber * creditAmount;
+@property (nonatomic, strong) NSNumber * pending;
+@property (nonatomic, strong) NSDecimalNumber * itemCost;
+@property (nonatomic, strong) NSNumber * saleQuantity;
+@property (nonatomic, strong) NSDate * date;
+@property (nonatomic, strong) User * user;
 
 @end

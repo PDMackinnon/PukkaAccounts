@@ -13,9 +13,9 @@
 
 
 
-@property (nonatomic, retain) NSString * courseSearch;
-@property (nonatomic, retain) NSNumber * showEnabled;
-@property (nonatomic, retain) NSNumber * showDisabled;
+@property (nonatomic, strong) NSString * courseSearch;
+@property (nonatomic, strong) NSNumber * showEnabled;
+@property (nonatomic, strong) NSNumber * showDisabled;
 
 
 @end

@@ -73,18 +73,6 @@
     return self;
 }
 
-- (void)dealloc
-{
-    [super dealloc];
-    [_nameString release];
-    [_courseString release];
-    [_matricString release];
-    [_emailString release];
-    [_attributes release];
-    
-    
-
-}
 
 
 -(BOOL)knowsPageRange:(NSRangePointer)range {

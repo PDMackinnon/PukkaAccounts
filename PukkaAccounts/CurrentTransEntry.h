@@ -13,10 +13,10 @@
 @private
    NSDecimalNumber * _value;
 }
-@property (nonatomic, retain) NSString * transDescription;
-@property (nonatomic, retain) NSDecimalNumber * itemCost;
-@property (nonatomic, retain) NSNumber * saleQuantity;
-@property (nonatomic, retain) NSDate * saleDate;
+@property (nonatomic, strong) NSString * transDescription;
+@property (nonatomic, strong) NSDecimalNumber * itemCost;
+@property (nonatomic, strong) NSNumber * saleQuantity;
+@property (nonatomic, strong) NSDate * saleDate;
 
 @property (readonly) NSDecimalNumber * saleAmountValue;  //calculated value
 

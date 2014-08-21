@@ -18,11 +18,11 @@
 -(id) initWithUser:(id)user;
 
 
-@property (retain) NSString *nameString;
-@property (retain) NSString *courseString;
-@property (retain) NSString *matricString;
-@property (retain) NSString *emailString;
-@property (retain) NSMutableDictionary *attributes;
+@property (strong) NSString *nameString;
+@property (strong) NSString *courseString;
+@property (strong) NSString *matricString;
+@property (strong) NSString *emailString;
+@property (strong) NSMutableDictionary *attributes;
 
 @property (assign) float lineHeight;
 @property (assign) NSRect pageRect;

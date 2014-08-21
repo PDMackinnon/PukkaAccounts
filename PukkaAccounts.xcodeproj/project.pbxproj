@@ -27,14 +27,12 @@
 		8066FBB814432FAD00E48AF1 /* PukkaAccountsAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8066FBB714432FAD00E48AF1 /* PukkaAccountsAppDelegate.m */; };
 		8066FBBB14432FAD00E48AF1 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8066FBB914432FAD00E48AF1 /* MainMenu.xib */; };
 		8066FBBE14432FAD00E48AF1 /* PukkaAccounts.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8066FBBC14432FAD00E48AF1 /* PukkaAccounts.xcdatamodeld */; };
+		808CF1C019A6023400A2EC18 /* CJSONDeserializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 808CF1BA19A6023400A2EC18 /* CJSONDeserializer.m */; };
+		808CF1C119A6023400A2EC18 /* CJSONSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 808CF1BC19A6023400A2EC18 /* CJSONSerializer.m */; };
+		808CF1C219A6023400A2EC18 /* NSDictionary_JSONExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 808CF1BF19A6023400A2EC18 /* NSDictionary_JSONExtensions.m */; };
 		80A4972C147C0EB10047263F /* pukka_icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 80A4972B147C0EB10047263F /* pukka_icon.icns */; };
 		80ADE971152C66E50092DBE8 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80ADE970152C66E50092DBE8 /* WebKit.framework */; };
 		80CA5DDB1476B03C00D55DD2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 80CA5DD91476B03C00D55DD2 /* Localizable.strings */; };
-		80CCF66714473F6D00F66FA8 /* CDataScanner_Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 80CCF65E14473F6D00F66FA8 /* CDataScanner_Extensions.m */; };
-		80CCF66814473F6D00F66FA8 /* CDataScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 80CCF66014473F6D00F66FA8 /* CDataScanner.m */; };
-		80CCF66914473F6D00F66FA8 /* CJSONDeserializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 80CCF66214473F6D00F66FA8 /* CJSONDeserializer.m */; };
-		80CCF66A14473F6D00F66FA8 /* CJSONScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 80CCF66414473F6D00F66FA8 /* CJSONScanner.m */; };
-		80CCF66B14473F6D00F66FA8 /* CJSONSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 80CCF66614473F6D00F66FA8 /* CJSONSerializer.m */; };
 		80D8E73914596E6D00702575 /* greenbuttonlarge.png in Resources */ = {isa = PBXBuildFile; fileRef = 80D8E73814596E6D00702575 /* greenbuttonlarge.png */; };
 		80E281B21459C25300930C9F /* CurrentSaleState.m in Sources */ = {isa = PBXBuildFile; fileRef = 80E281B11459C25300930C9F /* CurrentSaleState.m */; };
 		80F3B0DD14596B5100DE8A29 /* redButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 80F3B0DC14596B5100DE8A29 /* redButton.png */; };
@@ -83,19 +81,16 @@
 		8066FBB714432FAD00E48AF1 /* PukkaAccountsAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PukkaAccountsAppDelegate.m; sourceTree = "<group>"; };
 		8066FBBA14432FAD00E48AF1 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		8066FBBD14432FAD00E48AF1 /* PukkaAccounts.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PukkaAccounts.xcdatamodel; sourceTree = "<group>"; };
+		808CF1B919A6023400A2EC18 /* CJSONDeserializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJSONDeserializer.h; sourceTree = "<group>"; };
+		808CF1BA19A6023400A2EC18 /* CJSONDeserializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJSONDeserializer.m; sourceTree = "<group>"; };
+		808CF1BB19A6023400A2EC18 /* CJSONSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJSONSerializer.h; sourceTree = "<group>"; };
+		808CF1BC19A6023400A2EC18 /* CJSONSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJSONSerializer.m; sourceTree = "<group>"; };
+		808CF1BD19A6023400A2EC18 /* JSONRepresentation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONRepresentation.h; sourceTree = "<group>"; };
+		808CF1BE19A6023400A2EC18 /* NSDictionary_JSONExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDictionary_JSONExtensions.h; sourceTree = "<group>"; };
+		808CF1BF19A6023400A2EC18 /* NSDictionary_JSONExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDictionary_JSONExtensions.m; sourceTree = "<group>"; };
 		80A4972B147C0EB10047263F /* pukka_icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = pukka_icon.icns; sourceTree = "<group>"; };
 		80ADE970152C66E50092DBE8 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		80CA5DDA1476B03C00D55DD2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		80CCF65D14473F6D00F66FA8 /* CDataScanner_Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDataScanner_Extensions.h; sourceTree = "<group>"; };
-		80CCF65E14473F6D00F66FA8 /* CDataScanner_Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDataScanner_Extensions.m; sourceTree = "<group>"; };
-		80CCF65F14473F6D00F66FA8 /* CDataScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDataScanner.h; sourceTree = "<group>"; };
-		80CCF66014473F6D00F66FA8 /* CDataScanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDataScanner.m; sourceTree = "<group>"; };
-		80CCF66114473F6D00F66FA8 /* CJSONDeserializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJSONDeserializer.h; sourceTree = "<group>"; };
-		80CCF66214473F6D00F66FA8 /* CJSONDeserializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJSONDeserializer.m; sourceTree = "<group>"; };
-		80CCF66314473F6D00F66FA8 /* CJSONScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJSONScanner.h; sourceTree = "<group>"; };
-		80CCF66414473F6D00F66FA8 /* CJSONScanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJSONScanner.m; sourceTree = "<group>"; };
-		80CCF66514473F6D00F66FA8 /* CJSONSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJSONSerializer.h; sourceTree = "<group>"; };
-		80CCF66614473F6D00F66FA8 /* CJSONSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJSONSerializer.m; sourceTree = "<group>"; };
 		80D8E73814596E6D00702575 /* greenbuttonlarge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = greenbuttonlarge.png; sourceTree = "<group>"; };
 		80E281B01459C25300930C9F /* CurrentSaleState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurrentSaleState.h; sourceTree = "<group>"; };
 		80E281B11459C25300930C9F /* CurrentSaleState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CurrentSaleState.m; sourceTree = "<group>"; };
@@ -158,9 +153,9 @@
 		8066FBAA14432FAD00E48AF1 /* PukkaAccounts */ = {
 			isa = PBXGroup;
 			children = (
+				808CF1B819A6023400A2EC18 /* TouchJSON */,
 				80F3B0DC14596B5100DE8A29 /* redButton.png */,
 				80D8E73814596E6D00702575 /* greenbuttonlarge.png */,
-				80CCF65C14473F2700F66FA8 /* TouchJSON */,
 				800D3DBC144354B600FC53AF /* TodayDatePicker.h */,
 				800D3DBD144354B600FC53AF /* TodayDatePicker.m */,
 				800D3DB8144338DA00FC53AF /* DataManager.h */,
@@ -213,21 +208,19 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		80CCF65C14473F2700F66FA8 /* TouchJSON */ = {
+		808CF1B819A6023400A2EC18 /* TouchJSON */ = {
 			isa = PBXGroup;
 			children = (
-				80CCF65D14473F6D00F66FA8 /* CDataScanner_Extensions.h */,
-				80CCF65E14473F6D00F66FA8 /* CDataScanner_Extensions.m */,
-				80CCF65F14473F6D00F66FA8 /* CDataScanner.h */,
-				80CCF66014473F6D00F66FA8 /* CDataScanner.m */,
-				80CCF66114473F6D00F66FA8 /* CJSONDeserializer.h */,
-				80CCF66214473F6D00F66FA8 /* CJSONDeserializer.m */,
-				80CCF66314473F6D00F66FA8 /* CJSONScanner.h */,
-				80CCF66414473F6D00F66FA8 /* CJSONScanner.m */,
-				80CCF66514473F6D00F66FA8 /* CJSONSerializer.h */,
-				80CCF66614473F6D00F66FA8 /* CJSONSerializer.m */,
+				808CF1B919A6023400A2EC18 /* CJSONDeserializer.h */,
+				808CF1BA19A6023400A2EC18 /* CJSONDeserializer.m */,
+				808CF1BB19A6023400A2EC18 /* CJSONSerializer.h */,
+				808CF1BC19A6023400A2EC18 /* CJSONSerializer.m */,
+				808CF1BD19A6023400A2EC18 /* JSONRepresentation.h */,
+				808CF1BE19A6023400A2EC18 /* NSDictionary_JSONExtensions.h */,
+				808CF1BF19A6023400A2EC18 /* NSDictionary_JSONExtensions.m */,
 			);
 			name = TouchJSON;
+			path = Source;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -304,22 +297,20 @@
 				800D3DBE144354B600FC53AF /* TodayDatePicker.m in Sources */,
 				800D3DC11443550800FC53AF /* Transaction.m in Sources */,
 				800D3DC7144355FA00FC53AF /* TransController.m in Sources */,
+				808CF1C119A6023400A2EC18 /* CJSONSerializer.m in Sources */,
 				801A1B0514449C5E000A3BF0 /* CurrentTransEntry.m in Sources */,
 				801A1B091444A4C2000A3BF0 /* CurrentTransEntryController.m in Sources */,
 				801A1B0C1444A569000A3BF0 /* SalesController.m in Sources */,
-				80CCF66714473F6D00F66FA8 /* CDataScanner_Extensions.m in Sources */,
-				80CCF66814473F6D00F66FA8 /* CDataScanner.m in Sources */,
-				80CCF66914473F6D00F66FA8 /* CJSONDeserializer.m in Sources */,
-				80CCF66A14473F6D00F66FA8 /* CJSONScanner.m in Sources */,
-				80CCF66B14473F6D00F66FA8 /* CJSONSerializer.m in Sources */,
 				80E281B21459C25300930C9F /* CurrentSaleState.m in Sources */,
 				8054BC6A1488D680006784AD /* LabelPrintView.m in Sources */,
+				808CF1C219A6023400A2EC18 /* NSDictionary_JSONExtensions.m in Sources */,
 				80038DEA15207B420009688B /* StudioCredit.m in Sources */,
 				80038DEE15207CBA0009688B /* StudioCreditController.m in Sources */,
 				80647473157F4EF1005021E2 /* ReportsController.m in Sources */,
 				801A5F2E15B0818A00422B4B /* studioManagerSearchObjectController.m in Sources */,
 				801A5F3115B081E100422B4B /* StudioManagerSearchObject.m in Sources */,
 				80FB648815B5AF2900254B55 /* User.m in Sources */,
+				808CF1C019A6023400A2EC18 /* CJSONDeserializer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -370,7 +361,6 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_ENABLE_OBJC_GC = required;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
@@ -394,7 +384,6 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_ENABLE_OBJC_GC = required;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -410,6 +399,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -426,6 +416,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";

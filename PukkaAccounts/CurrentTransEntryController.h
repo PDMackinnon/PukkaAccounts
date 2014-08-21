@@ -25,17 +25,17 @@
 @interface CurrentTransEntryController : NSObjectController {
 @private
     
-    NSArrayController *userSearch;
+    NSArrayController *__strong userSearch;
 //    NSButton *saleProcessButton;
 //    NSTextField *newBalance;
-    SalesController *posArrayController;
-    TransController *transactionsController;
+    SalesController *__strong posArrayController;
+    TransController *__strong transactionsController;
 }
 
 
-@property (assign) IBOutlet SalesController *posArrayController;
-@property (assign) IBOutlet TransController *transactionsController;
-@property (assign) IBOutlet NSArrayController *userSearch;
+@property (strong) IBOutlet SalesController *posArrayController;
+@property (strong) IBOutlet TransController *transactionsController;
+@property (strong) IBOutlet NSArrayController *userSearch;
 
 //@property (assign) IBOutlet NSButton *saleProcessButton;
 //@property (assign) IBOutlet NSTextField *newBalance;

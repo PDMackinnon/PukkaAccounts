@@ -21,54 +21,54 @@
 
 @interface PukkaAccountsAppDelegate : NSObject <NSApplicationDelegate> {
 @private
-    NSWindow *window;
+    NSWindow *__strong window;
   // DataManager *_dataManager;
-    NSWindow *manageUsersWindow;
+    NSWindow *__strong manageUsersWindow;
     
     Transaction *pendingCredit;
-    TodayDatePicker *creditDate;
-    NSTextField *creditDescr;
-    NSTextField *creditAmount;
-    NSTextField *crDateDispl;
-    NSTextField *crDescrDispl;
-    NSTextField *creditAmountDispl;
-    NSTextField *crTransTotal;
-    NSTextField *crNewBalance;
-    NSTextField *crCurrBalance;
-    NSArrayController *userSearch;
-    NSView *studioCreditView;
-    NSTextField *studioCreditDescr;
-    NSTextField *studioCreditAmount;
-    NSButton *studioCreditCheckBox;
+    TodayDatePicker *__strong creditDate;
+    NSTextField *__strong creditDescr;
+    NSTextField *__strong creditAmount;
+    NSTextField *__strong crDateDispl;
+    NSTextField *__strong crDescrDispl;
+    NSTextField *__strong creditAmountDispl;
+    NSTextField *__strong crTransTotal;
+    NSTextField *__strong crNewBalance;
+    NSTextField *__strong crCurrBalance;
+    NSArrayController *__strong userSearch;
+    NSView *__strong studioCreditView;
+    NSTextField *__strong studioCreditDescr;
+    NSTextField *__strong studioCreditAmount;
+    NSButton *__strong studioCreditCheckBox;
 }
 
-@property (assign) IBOutlet NSWindow *window;
+@property (strong) IBOutlet NSWindow *window;
 @property (readonly) DataManager *dataManager;
-@property (assign) IBOutlet NSWindow *manageUsersWindow;
-@property (assign) IBOutlet NSWindow *studioCreditManagerWindow;
-@property (assign) IBOutlet NSWindow *reportsWindow;
+@property (strong) IBOutlet NSWindow *manageUsersWindow;
+@property (strong) IBOutlet NSWindow *studioCreditManagerWindow;
+@property (strong) IBOutlet NSWindow *reportsWindow;
 
 
-@property (nonatomic,retain) Transaction *pendingCredit;
+@property (nonatomic,strong) Transaction *pendingCredit;
 
-@property (assign) IBOutlet TodayDatePicker *creditDate;
-@property (assign) IBOutlet NSTextField *creditDescr;
-@property (assign) IBOutlet NSTextField *creditAmount;
+@property (strong) IBOutlet TodayDatePicker *creditDate;
+@property (strong) IBOutlet NSTextField *creditDescr;
+@property (strong) IBOutlet NSTextField *creditAmount;
 
-@property (assign) IBOutlet NSTextField *crDateDispl;
-@property (assign) IBOutlet NSTextField *crDescrDispl;
-@property (assign) IBOutlet NSTextField *creditAmountDispl;
+@property (strong) IBOutlet NSTextField *crDateDispl;
+@property (strong) IBOutlet NSTextField *crDescrDispl;
+@property (strong) IBOutlet NSTextField *creditAmountDispl;
 
-@property (assign) IBOutlet NSTextField *crTransTotal;
-@property (assign) IBOutlet NSTextField *crNewBalance;
-@property (assign) IBOutlet NSTextField *crCurrBalance;
+@property (strong) IBOutlet NSTextField *crTransTotal;
+@property (strong) IBOutlet NSTextField *crNewBalance;
+@property (strong) IBOutlet NSTextField *crCurrBalance;
 
-@property (assign) IBOutlet NSArrayController *userSearch;
+@property (strong) IBOutlet NSArrayController *userSearch;
 
-@property (assign) IBOutlet NSView *studioCreditView;
-@property (assign) IBOutlet NSTextField *studioCreditDescr;
-@property (assign) IBOutlet NSTextField *studioCreditAmount;
-@property (assign) IBOutlet NSButton *studioCreditCheckBox;
+@property (strong) IBOutlet NSView *studioCreditView;
+@property (strong) IBOutlet NSTextField *studioCreditDescr;
+@property (strong) IBOutlet NSTextField *studioCreditAmount;
+@property (strong) IBOutlet NSButton *studioCreditCheckBox;
 
 
 - (IBAction)addNewCredit:(id)sender;

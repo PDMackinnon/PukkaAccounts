@@ -38,7 +38,7 @@
     [importCredit setValue:currentUser forKey:@"user"];
     
     
-    [importCredit release];   //no need with garbage collection is on....
+
     
 }
 
@@ -73,18 +73,17 @@
    
 
     
-    [_currencyFormatter release];
     
     NSString * emailSubj = NSLocalizedString(@"Studio%20Credit%20Invoice",@"Batched Studio Credit email subject");
     
-    NSString * encodedEmailMessage = (NSString *)CFURLCreateStringByAddingPercentEscapes(
+    NSString * encodedEmailMessage = (NSString *)CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(
                                                                                          NULL,
                                                                                          (CFStringRef)emailMessage,
                                                                                          NULL,
                                                                                          (CFStringRef)@"!*'();:@&=+$,/?%#[]",
-                                                                                         kCFStringEncodingUTF8 );
+                                                                                         kCFStringEncodingUTF8 ));
     
-    NSString* emailAddr = [NSString stringWithString:@"djcadorders@dundee.ac.uk"];
+    NSString* emailAddr = @"djcadorders@dundee.ac.uk";
     
     NSString* mailToString = [NSString stringWithFormat:@"mailto:%@?subject=%@&body=%@",emailAddr,emailSubj,encodedEmailMessage];
     
@@ -250,27 +249,26 @@
 //    NSLog(@"message = %@",emailMessage);
     
     
-    [_currencyFormatter release];
     
   //  NSString * emailSubj = NSLocalizedString(@"",@"");     TODO !!
     
     NSString * emailSubj = @"Print DJCAD Studio Credits";
     
     
-    NSString * encodedEmailSubj = (NSString *)CFURLCreateStringByAddingPercentEscapes(
+    NSString * encodedEmailSubj = (NSString *)CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(
                                                                                          NULL,
                                                                                          (CFStringRef)emailSubj,
                                                                                          NULL,
                                                                                          (CFStringRef)@"!*'();:@&=+$,/?%#[]",
-                                                                                         kCFStringEncodingUTF8 );
+                                                                                         kCFStringEncodingUTF8 ));
     
     
-    NSString * encodedEmailMessage = (NSString *)CFURLCreateStringByAddingPercentEscapes(
+    NSString * encodedEmailMessage = (NSString *)CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(
                                                                                          NULL,
                                                                                          (CFStringRef)emailMessage,
                                                                                          NULL,
                                                                                          (CFStringRef)@"!*'();:@&=+$,/?%#[]",
-                                                                                         kCFStringEncodingUTF8 );
+                                                                                         kCFStringEncodingUTF8 ));
       
     
     

@@ -7,7 +7,7 @@
 //
 
 #import <AppKit/AppKit.h>
-#import <WebKit/WebView.h>
+#import <WebKit/WebKit.h>
 
 #import "DataManager.h"
 #import "Transaction.h"
@@ -15,13 +15,13 @@
 @interface StudioCreditController : NSObjectController
 
 
-@property (assign) IBOutlet NSWindow *modalAddMultipleCredits;
-@property (assign) IBOutlet NSWindow *modalDisableUsers;
-@property (assign) IBOutlet NSWindow *modalEnableUsers;
+@property (strong) IBOutlet NSWindow *modalAddMultipleCredits;
+@property (strong) IBOutlet NSWindow *modalDisableUsers;
+@property (strong) IBOutlet NSWindow *modalEnableUsers;
 
-@property (assign) IBOutlet NSArrayController *searchResultsController;
-@property (assign) IBOutlet NSTextField *totalAmountAdded;
-@property (assign) IBOutlet NSTextView *messageText;
+@property (strong) IBOutlet NSArrayController *searchResultsController;
+@property (strong) IBOutlet NSTextField *totalAmountAdded;
+@property (strong) IBOutlet NSTextView *messageText;
 
 - (IBAction)addCreditForSelected:(id)sender;
 - (IBAction)cancelAddModal:(id)sender;
