@@ -12,22 +12,22 @@
 @interface CurrentSaleState : NSObject {
 @private
     
-    NSTextField *newBalanceDisplay;
-    NSArrayController *allTransactions;
-    NSTextField *priceEach;
-    NSImageCell *greenImageCell;
-    NSImageCell *redImageCell;
+    NSTextField *__strong currentBalanceDisplay;
+    NSArrayController *__strong allTransactions;
+    NSTextField *__strong priceEach;
+    NSImageCell *__strong greenImageCell;
+    NSImageCell *__strong redImageCell;
 }
-@property (assign) IBOutlet NSTextField *newBalanceDisplay;
-@property (assign) IBOutlet NSArrayController *allTransactions;
-@property (assign) IBOutlet NSTextField *priceEach;
+@property (strong) IBOutlet NSTextField *currentBalanceDisplay;
+@property (strong) IBOutlet NSArrayController *allTransactions;
+@property (strong) IBOutlet NSTextField *priceEach;
 
 
 @property (readonly) NSImage * processSaleButtonImage;  //calculated value
 @property (readonly) NSColor * newBalanceDisplayColor;  //calculated value
 
-@property (assign) IBOutlet NSImageCell *greenImageCell;
-@property (assign) IBOutlet NSImageCell *redImageCell;
+@property (strong) IBOutlet NSImageCell *greenImageCell;
+@property (strong) IBOutlet NSImageCell *redImageCell;
 
 
 @end

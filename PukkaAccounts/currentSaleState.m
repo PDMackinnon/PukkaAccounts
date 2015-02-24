@@ -12,7 +12,7 @@
 @implementation CurrentSaleState
 @synthesize greenImageCell;
 @synthesize redImageCell;
-@synthesize newBalanceDisplay;
+@synthesize currentBalanceDisplay;
 @synthesize allTransactions;
 @synthesize priceEach;
 
@@ -26,20 +26,16 @@
     return self;
 }
 
-- (void)dealloc
-{
-    [super dealloc];
-}
 
 
 +(NSSet *) keyPathsForValuesAffectingProcessSaleButtonImage {
-    return [NSSet setWithObjects:@"self.newBalanceDisplay.floatValue",@"self.allTransactions.arrangedObjects", nil];
+    return [NSSet setWithObjects:@"self.currentBalanceDisplay.floatValue",@"self.allTransactions.arrangedObjects", nil];
     
 }
 
 -(NSImage *)processSaleButtonImage {
     
-    if ([newBalanceDisplay floatValue] < 0) {
+    if ([currentBalanceDisplay floatValue] < 0) {
         
         return [redImageCell image];
     }

@@ -9,6 +9,10 @@
 #import <AppKit/AppKit.h>
 #import <WebKit/WebKit.h>
 
+#import "CJSONSerializer.h"
+#import "CJSONDeserializer.h"
+
+
 #import "DataManager.h"
 #import "Transaction.h"
 
@@ -36,6 +40,7 @@
 - (IBAction)confirmDisableUsers:(id)sender;
 - (IBAction)confirmEnableUsers:(id)sender;
 
+- (IBAction)exportSelectedBalances:(id)sender;
 
 
 @end

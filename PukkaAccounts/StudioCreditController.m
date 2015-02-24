@@ -348,5 +348,127 @@
     [[NSApplication sharedApplication] stopModal];
 }
 
+- (IBAction)exportSelectedBalances:(id)sender {
+    
+    
+    NSLog(@"export balances 2014 admin tasks");
+    
+    
+    NSMutableArray *exportData = [NSMutableArray array]; //empty mutable array
+    
+    NSDateFormatter *jsonDateFormat = [[NSDateFormatter alloc] init];
+    [jsonDateFormat setFormatterBehavior:NSDateFormatterBehavior10_4];
+    [jsonDateFormat setDateStyle:NSDateFormatterShortStyle];
+    [jsonDateFormat setTimeStyle:NSDateFormatterNoStyle];
+    
+
+    NSNumberFormatter *_currencyFormatter = [[NSNumberFormatter alloc] init];
+    [_currencyFormatter setNumberStyle:NSNumberFormatterCurrencyStyle];
+    
+    
+    
+    
+    
+    NSArray * selectedUsers = [self searchResultsController].selectedObjects;
+    
+    for (id userToExport in selectedUsers) {
+        
+        
+//        @property (nonatomic, strong) NSNumber * enabledUser;
+//        @property (nonatomic, strong) NSNumber * currentYearofStudy;
+//        @property (nonatomic, strong) NSString * userName;
+//        @property (nonatomic, strong) NSString * emailAddress;
+//        @property (nonatomic, strong) NSString * matricNumber;
+//        @property (nonatomic, strong) NSString * fullName;
+//        @property (nonatomic, strong) NSString * subjectOfStudy;
+//        @property (nonatomic, strong) NSSet *transactions;
+
+        /*
+        NSLog(@"userName is: %@\n",[userToExport valueForKey:@"userName"]);
+        NSLog(@"currentYearofStudy is: %@\n",[userToExport valueForKey:@"currentYearofStudy"]);
+        NSLog(@"fullName is: %@\n",[userToExport valueForKey:@"fullName"]);
+        NSLog(@"subjectOfStudy is: %@\n",[userToExport valueForKey:@"subjectOfStudy"]);
+        NSLog(@"matricNumber is: %@\n",[userToExport valueForKey:@"matricNumber"]);
+        NSLog(@"emailAddress is: %@\n",[userToExport valueForKey:@"emailAddress"]);
+       // NSLog(@"transactions is: %@\n",[userToExport valueForKey:@"transactions"]);
+        NSLog(@"total 1 is: %@\n",[userToExport valueForKeyPath:@"transactions.@sum.creditAmount"]);
+        */
+        
+
+        //****------****-----
+        NSPredicate * notPending = [NSPredicate predicateWithFormat:@"pending == NO"];
+        NSSet *doneTransactions = [[userToExport valueForKey:@"transactions"] filteredSetUsingPredicate:notPending];
+        
+      //  NSLog(@"total 2 is: %@\n", [doneTransactions valueForKeyPath:@"@sum.creditAmount"]);
+
+        // total 2 is the correct answer !
+        //****------****-----
+
+        
+        
+        NSArray *userRow = [NSArray arrayWithObjects:   [userToExport valueForKey:@"userName"],
+                                                        [userToExport valueForKey:@"matricNumber"],
+                                                        [userToExport valueForKey:@"currentYearofStudy"],
+                                                        [userToExport valueForKey:@"fullName"],
+                                                        [userToExport valueForKey:@"subjectOfStudy"],
+                                                        [userToExport valueForKey:@"emailAddress"],
+                                                        [doneTransactions valueForKeyPath:@"@sum.creditAmount"],
+                                                        nil];
+        
+      //  NSLog(@"row recored is: %@",userRow);
+        
+        [exportData addObject:userRow];
+        
+        
+        
+    }//end for loop
+
+    NSError *error = NULL;
+    
+    
+    NSData *theJSONData = [[CJSONSerializer serializer] serializeArray:exportData error:&error];
+    if (error) {
+        NSLog(@"Serialization Error: %@", error);
+    }
+    
+    // Change the data back to a string
+    NSString* theStringObject = [[NSString alloc] initWithData:theJSONData encoding:NSUTF8StringEncoding];
+    
+    
+    NSLog(@"export JSON...\n%@",theStringObject);
+    
+    
+    int result;
+    NSArray *fileTypes = [NSArray arrayWithObject:@"json"];
+    NSSavePanel *saveJSONpanel = [NSSavePanel savePanel];
+    [saveJSONpanel setAllowedFileTypes:fileTypes];
+    
+    result = [saveJSONpanel runModal];
+    
+    if (result == NSFileHandlingPanelOKButton) {
+        
+        NSURL*  theFile = [saveJSONpanel URL];
+        
+        //write the file....
+        
+        NSLog(@"save as...%@",theFile);
+        
+        error = NULL;
+        
+        [theStringObject writeToURL:theFile atomically:YES encoding:NSUTF8StringEncoding error:&error];
+        
+        
+        if (error) {
+            NSLog(@"file save Error: %@", error);
+        }
+        
+        
+    }
+
+    
+    
+    
+}
+
 
 @end
